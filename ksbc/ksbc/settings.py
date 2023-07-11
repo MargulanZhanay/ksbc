@@ -25,12 +25,18 @@ SECRET_KEY = '^2@_xxx4ph(*q6x7f3^6o04$a5btcr_#y6w4ep8)e29zl*2j^-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '[::1]',
+    'testserver',
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'users.apps.UsersConfig',
     'about.apps.AboutConfig',
     'news.apps.NewsConfig',
     'django.contrib.admin',
@@ -39,6 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sorl.thumbnail',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -53,10 +61,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ksbc.urls'
 
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,5 +134,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
-MEDIA_URL = '/media'
+MEDIA_URL = '/media/'
+
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")

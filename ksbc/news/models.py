@@ -1,4 +1,7 @@
+from django.contrib.auth import get_user_model
 from django.db import models
+
+User = get_user_model()
 
 
 class News(models.Model):
@@ -9,9 +12,8 @@ class News(models.Model):
         verbose_name='Текст',
         help_text='Текст вашего поста'
     )
-    pub_date = models.DateTimeField(
-        verbose_name='Дата публикации',
-        auto_now_add=True,
+    pub_date = models.DateField(
+        verbose_name='Дата события',
         db_index=True
     )
     image = models.ImageField(
@@ -25,5 +27,5 @@ class News(models.Model):
         verbose_name = 'Новость',
         verbose_name_plural = 'Новости'
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.text[:15]
