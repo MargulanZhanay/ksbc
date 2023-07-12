@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% block title %}{% endblock title %}
+{% block content %}
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+        <h2>News</h2>
+        <ol>
+        <li><a href="{% url 'about:index' %}">Home</a></li>
+        <li>News</li>
+        </ol>
+    </div>
+</div><!-- End Breadcrumbs -->
+
+<!-- ======= Blog Section ======= -->
+<section id='blog' class='blog'>
+    <div class='container' data-aos='fade-up' data-aos-delay="100">
+        <div class="row gy-4 posts-list">
+            {% for news in page_obj %}
+                <div class="col-xl-4 col-md-6">
+                    <div class="post-item position-relative h-100">
+                        <div class='post-img' position-relative overflow-hidden>
+                            {% thumbnail news.image as im %}
+                            <img src="{{im.url}}" class="img-fluid" alt="">
+                            {% endthumbnail %}
+                            <span class="post-date">{{ news.pub_date|date:"B d" }}</span>
+                        </div>
+
+                        <div class="post-content d-flex-column">
+                            <h3 class="post-title">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</h3>
+                            <p>
+                            Similique neue nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et
+                            laboriosam eius aut nostrum quidem aliquid dicta.
+                            </p>
+                            <hr>
+
+                            <a href="{% url 'news:news_details' %}}" class="readmore stretched-link"><span>Read More</span><i
+                                class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div><!-- End post list item -->
+            {% endfor %}
+        </div> <!-- Eng blog posts list -->
+
+        {% include 'news/includes/paginator.html' %}
+    </div>
+</section>
+<!-- ======= End Blog Section ======= -->
+{% endblock content %}
