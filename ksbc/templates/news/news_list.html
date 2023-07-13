@@ -28,10 +28,9 @@
                         </div>
 
                         <div class="post-content d-flex-column">
-                            <h3 class="post-title">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</h3>
+                            <h3 class="post-title">{{ news.title }}</h3>
                             <p>
-                            Similique neue nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et
-                            laboriosam eius aut nostrum quidem aliquid dicta.
+                            {{ news.text|truncatechars:150 }}
                             </p>
                             <hr>
 

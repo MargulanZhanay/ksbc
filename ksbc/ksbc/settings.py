@@ -36,6 +36,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'events.apps.EventsConfig',
     'users.apps.UsersConfig',
     'about.apps.AboutConfig',
     'news.apps.NewsConfig',

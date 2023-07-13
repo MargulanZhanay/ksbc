@@ -1,15 +1,17 @@
 from django.contrib import admin
 
-from .models import News
+# Register your models here.
+from .models import Events
 
 
-class NewsAdmin(admin.ModelAdmin):
+class EventsAdmin(admin.ModelAdmin):
     list_display = (
         'pk',
         'title',
         'text',
         'pub_date',
-        'image'
+        'image',
+        'url'
     )
     search_fields = ('title', )
     list_filter = ('pub_date', )
@@ -17,4 +19,4 @@ class NewsAdmin(admin.ModelAdmin):
     empty_value_display = '-пусто-'
 
 
-admin.site.register(News, NewsAdmin)
+admin.site.register(Events, EventsAdmin)

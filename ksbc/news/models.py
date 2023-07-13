@@ -6,7 +6,8 @@ User = get_user_model()
 
 class News(models.Model):
     title = models.CharField(
-        max_length=128
+        verbose_name='Название новости',
+        max_length=250
     )
     text = models.TextField(
         verbose_name='Текст',

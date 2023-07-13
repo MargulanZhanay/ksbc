@@ -8,5 +8,11 @@ CACHE_SECONDS = 20
 
 
 def news(request):
-    
-    return render(request, 'news/news_list.html')
+    news_list = News.objects.order_by('-pub_date')
+    paginator = Paginator(news_list, NEWS_PER_PAGE)
+    page_number = request.POST.get('page')
+    page_obj = paginator.get_page(page_number)
+    context = {
+        'page_obj': page_obj,
+    }
+    return render(request, 'news/news_list.html', context)
