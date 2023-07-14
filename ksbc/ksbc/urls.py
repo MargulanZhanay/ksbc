@@ -8,6 +8,7 @@ urlpatterns = [
 
     path('ksbcadminsecret/', admin.site.urls),
     path('news/', include('news.urls')),
+    path('events/', include('events.urls'))
 
 ]
 

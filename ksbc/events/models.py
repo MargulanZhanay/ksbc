@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import date
 
 
 class Events(models.Model):
@@ -25,6 +26,14 @@ class Events(models.Model):
         max_length=255,
         blank=True
     )
+
+    @property
+    def date_overdue(self):
+        return date.today() > self.pub_date
+
+    @property
+    def date_valid(self):
+        return date.today() <= self.pub_date
 
     class Meta:
         ordering = ('-pub_date', )

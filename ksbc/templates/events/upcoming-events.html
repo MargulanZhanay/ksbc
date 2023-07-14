@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% block title %}{% endblock title %}
+{% block content %}
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+        <h2>Past Events</h2>
+        <ol>
+        <li><a href="{% url 'about:index' %}">Home</a></li>
+        <li>Past Events</li>
+        </ol>
+    </div>
+</div><!-- End Breadcrumbs -->
+
+<!-- ======= Past Events Section ======= -->
+<section id='blog' class='blog'>
+    <div class='container' data-aos='fade-up' data-aos-delay="100">
+        <div class="row gy-4 posts-list">
+            {% for event in page_obj %}
+                {% if event.date_valid %}
+                    <div class="col-xl-4 col-md-6">
+                        <div class="post-item position-relative h-100">
+                            <div class='post-img' position-relative overflow-hidden>
+                                {% thumbnail event.image "960x339" crop="center" upscale=True as im %}
+                                <img src="{{im.url}}" class="img-fluid" alt="">
+                                {% endthumbnail %}
+                                <span class="post-date">{{ event.pub_date|date:"M d" }}</span>
+                            </div>
+
+                            <div class="post-content d-flex-column">
+                                <h3 class="post-title">{{ event.title }}</h3>
+                                <p>
+                                {{ event.text|truncatechars:150 }}
+                                </p>
+                                <hr>
+
+                                <a href="" class="readmore stretched-link"><span>Read More</span><i
+                                    class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End post list item -->
+                {% endif %}
+            {% endfor %}
+        </div> <!-- Eng event posts list -->
+
+        {% include 'includes/paginator.html' %}
+    </div>
+</section>
+<!-- ======= End Past Events Section ======= -->
+{% endblock content %}
