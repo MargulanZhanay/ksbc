@@ -10,4 +10,4 @@ class CustomUser(AbstractUser):
     company_name = models.CharField(max_length=254, blank=True)
 
     def __str__(self) -> str:
-        return self.email
+        return f'{self.username}'
