@@ -14,7 +14,6 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
-    import debug_toolbar
     urlpatterns += static(
         settings.STATIC_URL, document_root=settings.STATICFILES_DIRS
     )

@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}{% endblock title %}
 {% block content %}
 <!-- ======= Breadcrumbs ======= -->
-<div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
       <h2>Login</h2>
@@ -37,7 +38,7 @@
                         {% endif %}
                         <div class="mb-md-5 mt-md-4 pb-5">
                             <div class="text-center">
-                            <img src="assets/img/logo.png"
+                            <img src="{% static 'img/ksbc_logo.png' %}"
                                 style="width: 100%;" alt="logo">
                             </div>
             
@@ -60,7 +61,7 @@
                         </div>
             
                         <div>
-                            <p class="mb-0">Don't have an account? <a href="#!" class="text-black-50 fw-bold">Sign Up</a>
+                            <p class="mb-0">Don't have an account? <a href="{% url 'users:signup' %}" class="text-black-50 fw-bold">Sign Up</a>
                             </p>
                         </div>
                     </div>
