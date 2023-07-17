@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock title %}
+{% block content %}
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+      <h2>Login</h2>
+      <ol>
+        <li><a href="{% url 'about:index' %}">Home</a></li>
+        <li>Login</li>
+      </ol>
+
+    </div>
+</div><!-- End Breadcrumbs -->
+
+<!-- ======= Login Section ======= -->
+<section class="login-color-bg">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card block-bg-custom text-black" style="border-radius: 1rem;">
+                    <div class="login-item card-body p-5 text-center">
+                        {% if form.errors %}
+                            {% for field in form %}
+                                {% for error in field.errors %}
+                                    <div class='alert alert-danger'>
+                                        {{ error|escape }}
+                                    </div>
+                                {% endfor %}
+                            {% endfor %}
+                            {% for error in form.non_field_errors %}
+                                <div class="alert alert-danger">
+                                    {{ error|escape }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="mb-md-5 mt-md-4 pb-5">
+                            <div class="text-center">
+                            <img src="assets/img/logo.png"
+                                style="width: 100%;" alt="logo">
+                            </div>
+            
+                            <p class="text-black-50 mb-5 pt-5">Please enter your login and password!</p>
+            
+                            <div class="form-outline form-white mb-4">
+
+                                <input type="email" class="form-control form-control-lg" />
+                                <label class="form-label">Email</label>
+                            </div>
+            
+                            <div class="form-outline form-white mb-4">
+                                <input type="password" class="form-control form-control-lg" />
+                                <label class="form-label">Password</label>
+                            </div>
+            
+                            <p class="small mb-5 pb-lg-2"><a class="text-black-50" href="#!">Forgot password?</a></p>
+            
+                            <button class="btn btn-outline-danger btn-lg px-5" type="submit">Login</button>
+                        </div>
+            
+                        <div>
+                            <p class="mb-0">Don't have an account? <a href="#!" class="text-black-50 fw-bold">Sign Up</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- End of Login Section -->
+{% endblock content %}

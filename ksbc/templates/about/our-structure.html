@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}{% endblock title %}
 {% block content %}
-<div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
       <h2>Our Structure</h2>
       <ol>
@@ -46,7 +47,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-12 order-2 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                        <img src="assets/img/organisational-chart-2.jpg" alt="" class="img-fluid">
+                        <img src="{% static 'img/organisational-chart-2.jpg' %}" alt="" class="img-fluid">
                     </div>
                 </div>
             </div><!-- End tab content item -->
@@ -71,7 +72,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-12 order-2 order-lg-2 text-center">
-                        <img src="assets/img/organisational-chart-1.jpg" alt="" class="img-fluid">
+                        <img src="{% static 'img/organisational-chart-1.jpg' %}" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>

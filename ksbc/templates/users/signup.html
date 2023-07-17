@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock title %}
+{% block content %}
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+      <h2>Sign Up</h2>
+      <ol>
+        <li><a href="{% url 'about:index' %}">Home</a></li>
+        <li>Login</li>
+      </ol>
+
+    </div>
+</div><!-- End Breadcrumbs -->
+
+<!-- ======= Login Section ======= -->
+<section class="login-color-bg">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card block-bg-custom text-black" style="border-radius: 1rem;">
+                    
+                    <div class="login-item card-body p-5 text-center">
+                        {% load user_filters %}
+                            {% if form.errors %}
+                                {% for field in form %}
+                                    {% for error in field.errors %}            
+                                        <div class="alert alert-danger">
+                                        {{ error|escape }}
+                                        </div>
+                                    {% endfor %}
+                                {% endfor %}
+                                {% for error in form.non_field_errors %}
+                                    <div class="alert alert-danger">
+                                        {{ error|escape }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+
+                        <div class="mb-md-5 mt-md-4 pb-5">
+                            <div class="text-center">
+                            <img src="{% static 'img/ksbc_logo.png' %}"
+                                style="width: 100%;" alt="logo">
+                            </div>
+            
+                            <p class="text-black-50 mb-5 pt-5">Please fill out the form to register!</p>
+                            
+                            <form action='{% url 'users:signup' %}' method=POST>
+                                {% csrf_token %}
+
+                                {% for field in form %}
+                                    <div class="form-outline form-white mb-4">
+                                        {{ field|addclass:'form-control'}}
+                                        <label class='form-label' for="{{ field.id_for_label }}">
+                                            {{ field.label }}
+                                            {% if field.field.required %}
+                                            <span class="required text-danger">*</span>
+                                            {% endif %}
+                                        </label>
+                                        <br>
+                                        {% if field.help_text %}
+                                            <small id="{{ field.id_for_label }}-help" class="form-text text-muted">
+                                                {{ field.help_text|safe }}
+                                            </small>
+                                        {% endif %}
+                                    </div>
+                                {% endfor %}
+                                <input type='submit' value='Signup' class='btn btn-outline-danger btn-lg px-5'>
+                            </form>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- End of Login Section -->
+{% endblock content %}

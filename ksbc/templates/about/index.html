@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}{% endblock title %}
 {% block content %}
+{% load static %}
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="hero">
     <div class="info d-flex align-items-center">
@@ -18,13 +19,13 @@
         </div>
     </div>
     <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-      <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/hero-carousel-1.jpg)">
+      <div class="carousel-item active" style="background-image: url({% static 'img/hero-carousel/hero-carousel-1.jpg' %})">
       </div>
 
-      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-2.jpg)"></div>
-      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-3.jpg)"></div>
-      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-4.jpg)"></div>
-      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-5.jpg)"></div>
+      <div class="carousel-item" style="background-image: url({% static 'img/hero-carousel/hero-carousel-2.jpg' %})"></div>
+      <div class="carousel-item" style="background-image: url({% static 'img/hero-carousel/hero-carousel-3.jpg' %})"></div>
+      <div class="carousel-item" style="background-image: url({% static 'img/hero-carousel/hero-carousel-4.jpg' %})"></div>
+      <div class="carousel-item" style="background-image: url({% static 'img/hero-carousel/hero-carousel-5.jpg' %})"></div>
 
       <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
@@ -50,7 +51,7 @@
             <div class="card-item">
                 <div class="row">
                     <div class="col-xl-5">
-                        <div class="card-bg" style="background-image: url(assets/img/about_us.jpeg);"></div>
+                        <div class="card-bg" style="background-image: url({% static 'img/about_us.jpeg' %});"></div>
                     </div>
                     <div class="col-xl-7 d-flex align-items-center">
                         <div class="card-body">
@@ -67,7 +68,7 @@
             <div class="card-item">
                 <div class="row">
                     <div class="col-xl-5">
-                        <div class="card-bg" style="background-image: url(assets/img/about_us.jpeg);"></div>
+                        <div class="card-bg" style="background-image: url({% static 'img/about_us.jpeg' %});"></div>
                     </div>
                     <div class="col-xl-7 d-flex align-items-center">
                         <div class="card-body">
@@ -85,7 +86,7 @@
             <div class="card-item">
                 <div class="row">
                     <div class="col-xl-5">
-                        <div class="card-bg" style="background-image: url(assets/img/about_us.jpeg);"></div>
+                        <div class="card-bg" style="background-image: url({% static 'img/about_us.jpeg' %});"></div>
                     </div>
                     <div class="col-xl-7 d-flex align-items-center">
                         <div class="card-body">
@@ -103,7 +104,7 @@
             <div class="card-item">
                 <div class="row">
                     <div class="col-xl-5">
-                        <div class="card-bg" style="background-image: url(assets/img/about_us.jpeg);"></div>
+                        <div class="card-bg" style="background-image: url({% static 'img/about_us.jpeg' %});"></div>
                     </div>
                     <div class="col-xl-7 d-flex align-items-center">
                         <div class="card-body">
@@ -132,27 +133,27 @@
             <div class="container" data-aos="zoom-in">
                 <div class="row">
                     <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/img/partners/partner-1.jpg" class="img-fluid" alt="">
+                        <img src="{% static 'img/partners/partner-1.jpg' %}" class="img-fluid" alt="">
                     </div>
             
                     <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/img/partners/partner-2.jpg" class="img-fluid" alt="">
+                        <img src="{% static 'img/partners/partner-2.jpg' %}" class="img-fluid" alt="">
                     </div>
             
                     <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/img/partners/partner-3.jpg" class="img-fluid" alt="">
+                        <img src="{% static 'img/partners/partner-3.jpg' %}" class="img-fluid" alt="">
                     </div>
             
                     <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/img/partners/partner-4.jpg" class="img-fluid" alt="">
+                        <img src="{% static 'img/partners/partner-4.jpg' %}" class="img-fluid" alt="">
                     </div>
             
                     <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/img/partners/partner-5.jpg" class="img-fluid" alt="">
+                        <img src="{% static 'img/partners/partner-5.jpg' %}" class="img-fluid" alt="">
                     </div>
             
                     <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/img/partners/partner-6.jpg" class="img-fluid" alt="">
+                        <img src="{% static 'img/partners/partner-6.jpg' %}" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>

@@ -38,6 +38,11 @@
           </ul>
         </li>
         <li><a href="contact_us.html" class="active">Contact Us</a></li>
+        {% if user.is_authenticated %}
+          <li><a data-aos="fade-up" data-aos-delay="200" href="{% url 'users:logout' %}" class="btn-get-started">Logout</a></li>
+        {% else %}
+        <li><a data-aos="fade-up" data-aos-delay="200" href="{% url 'users:login' %}" class="btn-get-started">Login</a></li>
+        {% endif %}
       </ul>
     </nav><!-- .navbar -->
 
