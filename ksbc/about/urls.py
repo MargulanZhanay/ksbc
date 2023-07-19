@@ -11,5 +11,6 @@ urlpatterns = [
         'our-structure/',
         views.OurStructureView.as_view(),
         name='our-structure'
-    )
+    ),
+    path('contact-us/', views.ContactUsView, name='contact-us'),
 ]

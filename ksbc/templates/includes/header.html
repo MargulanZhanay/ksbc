@@ -37,7 +37,7 @@
             <li><a href="#">Dropdown 4</a></li>
           </ul>
         </li>
-        <li><a href="contact_us.html" class="active">Contact Us</a></li>
+        <li><a href="{% url 'about:contact-us' %}" class="active">Contact Us</a></li>
         {% if user.is_authenticated %}
           <li><a data-aos="fade-up" data-aos-delay="200" href="{% url 'users:logout' %}" class="btn-get-started">Logout</a></li>
         {% else %}

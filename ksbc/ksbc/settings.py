@@ -36,12 +36,12 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.admin',
     'core.apps.CoreConfig',
     'events.apps.EventsConfig',
     'users.apps.UsersConfig',
     'about.apps.AboutConfig',
     'news.apps.NewsConfig',
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -150,4 +150,13 @@ LOGIN_URL = 'users:login'
 
 LOGIN_REDIRECT_URL = 'about:index'
 
-# LOGOUT_REDIRECT_URL = 'about:index'
+# Email Settings
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'mcmrkr@gmail.com'
+EMAIL_HOST_PASSWORD = 'gwpgvckpnfwmeftr'
+
+

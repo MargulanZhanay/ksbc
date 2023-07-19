@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock title %}
+{% block content %}
+{% load static %}
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('{% static 'img/breadcrumbs-bg.jpg' %}');">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Contact Us</h2>
+        <ol>
+        <li><a href="index.html">Home</a></li>
+        <li>Contact Us</li>
+        </ol>
+    </div>
+</div><!-- End Breadcrumbs -->
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+            <div class="col-lg-6">
+                <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+                <i class="bi bi-map"></i>
+                <h3>Our Address</h3>
+                <p>600 North Bridge Road, #10-01 Parkview Square, Singapore, 188778</p>
+                </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>contact@ksbc.sg</p>
+                </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-telephone"></i>
+                    <h3>Call Us</h3>
+                    <p>+65 93874275</p>
+                </div>
+            </div><!-- End Info Item -->
+        </div>
+
+        <div class="row gy-4 mt-1">
+
+            <div class="col-lg-6">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+                        src="https://maps.google.com/maps?width=600&amp;height=384&amp;hl=en&amp;q=600 North Bridge Road&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                    </div>
+                </div>
+            </div><!-- End Google Maps -->
+
+            <div class="col-lg-6">
+                <form action="{% url 'about:contact-us' %}" method="post" role="form" class="php-email-form">
+                    {% csrf_token %}
+                    <div class="row gy-4">
+                        <div class="col-lg-6 form-group">
+                            <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First Name*" required>
+                        </div>
+                        <div class="col-lg-6 form-group">
+                            <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Last Name*" required>
+                        </div>
+                    </div>
+                    <div class="row gy-4">
+                        <div class="col-lg-6 form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email*" required>
+                        </div>
+                        <div class="col-lg-6 form-group">
+                            <input type="number" name="phone_number" class="form-control" id="phone_number" placeholder="Phone Number*" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Company Name*" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" rows="5" placeholder="Message*" required></textarea>
+                    </div>
+                    {% if first_name %}
+                    <div class="my-3">
+                        <div class="sent-message">Thanks {{ first_name }} {{last_name}}. Your message has been sent. Thank you!</div>
+                    </div>
+                    {% endif %}
+                    <div class="text-center"><button type="submit">Send Message</button></div>
+                </form>
+            </div><!-- End Contact Form -->
+        </div>
+    </div>
+</section><!-- End Contact Section -->
+{% endblock %}
