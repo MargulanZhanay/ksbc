@@ -167,3 +167,12 @@ def stripe_webhook(request):
         user_membership.payment_successful = True
         user_membership.save()
     return HttpResponse(status=200)
+
+
+def profile(request):
+    user_membership = UserMembership.objects.get(user=request.user)
+
+    return render(request, 'users/profile.html', {
+        'user': request.user,
+        'user_membership': user_membership,
+    })

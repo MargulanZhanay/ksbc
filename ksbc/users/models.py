@@ -8,6 +8,7 @@ class CustomUser(AbstractUser):
     first_name = models.CharField(max_length=150, blank=True)
     last_name = models.CharField(max_length=150, blank=True)
     company_name = models.CharField(max_length=254, blank=True)
+    job_position = models.CharField(max_length=254, blank=True)
 
     def __str__(self) -> str:
         return f'{self.username}'
