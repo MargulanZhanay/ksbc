@@ -37,6 +37,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'membership.apps.MembershipConfig',
     'core.apps.CoreConfig',
     'events.apps.EventsConfig',
     'users.apps.UsersConfig',
@@ -160,3 +161,9 @@ EMAIL_HOST_USER = 'mcmrkr@gmail.com'
 EMAIL_HOST_PASSWORD = 'gwpgvckpnfwmeftr'
 
 
+# Stripe account
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51NQ2HQDDig466w1SvlmFR7TCG9dIJBe1OXpOGWllrQMSZ3LTnd80Fv0atKqkW0GEPvwWV2WEXFMh5mi3KhyiLVJC00v6RDWexJ'
+STRIPE_SECRET_KEY = 'sk_test_51NQ2HQDDig466w1SiJC5wy0lgzvEF4ytKdfwWhP01elbm2WuHAyoZvRv7sumQDYRWlb1otOJoPhocPOhke9djj4u00u4XzFYHi'
+REDIRECT_DOMAIN = 'http://127.0.0.1:8000'
+STRIPE_WEBHOOK_SECRET_KEY = 'whsec_6b7bea276d506cd38c7e7dc9088eda2f691278e0659b81c3f6059b04d3c1c38f'

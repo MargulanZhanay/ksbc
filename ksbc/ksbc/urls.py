@@ -22,6 +22,7 @@ urlpatterns = [
     path('reset/done/', PasswordResetCompleteView.as_view(
         template_name='users/password_reset_complete.html'),
         name='password_reset_complete'),
+    path('', include('membership.urls'))
 ]
 
 if settings.DEBUG:
