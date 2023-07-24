@@ -1,6 +1,6 @@
-from django.views.generic.base import TemplateView
-from django.shortcuts import render
 from django.core.mail import send_mail
+from django.shortcuts import render
+from django.views.generic.base import TemplateView
 
 
 class AboutUsView(TemplateView):

@@ -1,5 +1,6 @@
-from django.shortcuts import render
 from django.core.paginator import Paginator
+from django.shortcuts import render
+
 from .models import Events
 
 EVENTS_PER_PAGE = 6

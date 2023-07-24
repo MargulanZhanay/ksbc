@@ -1,16 +1,19 @@
 
-from django.views.generic import ListView
-from django.contrib import messages
-from django.conf import settings
-from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponseRedirect, HttpResponse
-from .models import Membership, UserMembership, Subscription
-from django.urls import reverse
-from django.contrib.auth.decorators import login_required
-from django.views.decorators.csrf import csrf_exempt
-import stripe
 import time
+
+import stripe
+from django.conf import settings
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse
 from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
+from django.views.generic import ListView
+
+from .forms import UserProfileEditForm
+from .models import Membership, Subscription, UserMembership
 
 
 def get_user_membership(request):
@@ -137,6 +140,7 @@ def payment_successful(request):
     })
 
 
+# use Stripe dummy card: 4000 0000 0000 3220
 def payment_cancelled(request):
     stripe.api_key = settings.STRIPE_SECRET_KEY
     return render(request, 'membership/payment_cancelled.html')
@@ -170,9 +174,47 @@ def stripe_webhook(request):
 
 
 def profile(request):
-    user_membership = UserMembership.objects.get(user=request.user)
+    user_membership = get_user_membership(request)
+    user_subscription = get_user_subscription(request)
+    user = request.user
+    form = UserProfileEditForm(instance=user)
 
-    return render(request, 'users/profile.html', {
+    if request.method == 'POST':
+        form = UserProfileEditForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect('profile')
+    context = {
         'user': request.user,
         'user_membership': user_membership,
-    })
+        'user_subscription': user_subscription,
+        'form': form
+    }
+    return render(request, 'users/profile.html', context)
+
+
+def cancelSubscription(request):
+    user_sub = get_user_subscription(request)
+    if user_sub.active:
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        subscription = stripe.Subscription.retrieve(
+            user_sub.stripe_subscription_id
+        )
+        subscription.delete()
+
+        user_sub.active = False
+        user_sub.save()
+
+        user_membership = user_sub.user_membership
+        user_membership.payment_successful = False
+        user_membership.membership = None
+        user_membership.stripe_checkout_id = None
+        user_membership.save()
+
+        messages.info(
+            request, 'Successfully cancelled membership.'
+        )
+    else:
+        messages.info(request, 'You do not have an active membership.')
+
+    return redirect(reverse('membership:profile'))

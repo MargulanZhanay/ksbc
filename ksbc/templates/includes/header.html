@@ -1,37 +1,58 @@
 {% load static %}
+{% load active_link_tags %}
 <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+  <a href="{% url 'about:index' %}" class="logo d-flex align-items-center">
+    <!-- Uncomment the line below if you also wish to use an image logo -->
+    <!-- <img src="{% static 'img/logo.png' %}" alt=""> -->
+    <h1>KSBC<span>.</span></h1>
+  </a>
 
-    <a href="index.html" class="logo d-flex align-items-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1>KSBC<span>.</span></h1>
-    </a>
+  <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+  <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+  <nav id="navbar" class="navbar">
+    <ul>
+      <li>
+        <a href="{% url 'about:index' %}">About Us</a>
+      </li>
 
-    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a href="{% url 'about:index' %}">About Us</a></li>
-        <li><a href="{% url 'about:what-we-do' %}">What We Do</a></li>
-        <li><a href="{% url 'news:news' %}">News</a></li>
-        <li><a href="{% url 'membership:membership-list' %}">Membership</a></li>
-        <li><a href="{% url 'about:our-structure' %}">Our Structure</a></li>
-        <li><a href="https://www.flickr.com/">Photo Gallery</a></li>
-        <li class="dropdown"><a href="#"><span>Events</span> <i
-          class="bi bi-chevron-down dropdown-indicator"></i></a>
-          <ul>
-            <li><a href="{% url 'events:upcoming_events' %}">Upcoming Events</a></li>
-            <li><a href="{% url 'events:past_events' %}">Past Events</a></li>
-          </ul>
-        </li>
-        <li><a href="{% url 'about:contact-us' %}" class="active">Contact Us</a></li>
-        {% if user.is_authenticated %}
-          <li><a data-aos="fade-up" data-aos-delay="200" href="{% url 'membership:profile' %}" class="btn-get-started">Profile</a></li>
-          <li><a data-aos="fade-up" data-aos-delay="200" href="{% url 'users:logout' %}" class="btn-get-started">Logout</a></li>
-        {% else %}
-        <li><a data-aos="fade-up" data-aos-delay="200" href="{% url 'users:login' %}" class="btn-get-started">Login</a></li>
-        {% endif %}
-      </ul>
-    </nav><!-- .navbar -->
+      <li>
+          <a href="{% url 'about:what-we-do' %}">What We Do</a>
+      </li>
 
+      <li>
+          <a href="{% url 'news:news' %}">News</a>
+      </li>
+
+      <li>
+          <a href="{% url 'membership:membership-list' %}">Membership</a>
+      </li>
+
+      <li>
+          <a href="{% url 'about:our-structure' %}">Our Structure</a>
+      </li>
+
+      <li class="dropdown">
+        <a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <ul>
+            <li>
+                <a href="{% url 'events:upcoming_events' %}">Upcoming Events</a>
+            </li>
+            <li>
+                <a href="{% url 'events:past_events' %}">Past Events</a>
+            </li>
+        </ul>
+      </li>
+
+      <li>
+          <a href="{% url 'about:contact-us' %}">Contact Us</a>
+      </li>
+
+      {% if user.is_authenticated %}
+        <li><a href="{% url 'membership:profile' %}" class="btn-get-started">Profile</a></li>
+        <li><a data-aos="fade-up" data-aos-delay="200" href="{% url 'users:logout' %}" class="btn-get-started">Logout</a></li>
+      {% else %}
+      <li><a data-aos="fade-up" data-aos-delay="200" href="{% url 'users:login' %}" class="btn-get-started">Login</a></li>
+      {% endif %}
+    </ul>
+  </nav><!-- .navbar -->
 </div>
