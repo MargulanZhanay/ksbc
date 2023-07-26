@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock title %}
+{% block content %}
+{% load static %}
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
+        <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+            <h2>Слова Основателя</h2>
+            <ol>
+            <li><a href="{% url 'about:index' %}">Главная страница</a></li>
+            <li>Слова Основателя</li>
+            </ol>
+        </div>
+    </div><!-- End Breadcrumbs -->
+
+
+    <section id="alt-services" class="alt-services">
+        <div class="container" data-aos="fade-up">
+            <div class="row justify-content-around gy-4">
+                <div class="col-lg-5 d-flex flex-column justify-content-center">
+                    <h3>Султан Маренов</h3>
+                    <h5>Основатель и Исполнительный Директор</h5>
+                    <h5>sultan.marenov@ksbc.sg</h5>
+                    <p>Дорогие друзья,<br>
+                        Добро пожаловать в Казахстанско-Сингапурский деловой совет (KSBC).
+                        <br><br>
+                        KSBC - молодая организация, но наши члены - очень опытные предприниматели и руководители высшего звена в различных секторах экономики. Мы здесь для того, чтобы сблизить два быстрорастущих региона Юго-Восточной Азии и Центральной Азии, причем Сингапур и Казахстан являются хорошо известными воротами в оба региона. 
+                        <br><br>
+                        Обе страны обладают необходимой инфраструктурой, нормативно-правовой базой, основанной на лучших международных стандартах, и, самое главное, образованными, современными и активными людьми. Оба региона обладают уникальными особенностями и дополняют друг друга, в Юго-Восточной Азии наблюдается быстрый рост потребления из-за динамичного экономического роста и плотной численности населения, в то время как в Центральной Азии много полезных ископаемых и ресурсов агропромышленного комплекса, которые необходимы для современного и экологически чистого производства. 
+                        <br><br>
+                        Поэтому сейчас самое время начать более активную работу по многим направлениям деловых контактов. Мы призываем предпринимателей, компании и корпорации расширять деловое сотрудничество между Сингапуром и Казахстаном, находить новых партнеров и расширять географию присутствия. 
+                        <br><br>
+                        В дополнение к бизнесу, мы в KSBC считаем, что культурное сближение между сингапурцами и казахами также будет очень ценным. Для обоих государств все еще остается много неизвестного друг о друге, и мы стремимся исправить это.
+                        <br><br>
+                        Мы надеемся, что совместными усилиями мы сможем достичь многих целей и сделать много полезного для Сингапура, Казахстана и за его пределами.
+                        <br><br>
+                        Ваш,<br>
+                        Султан Маренов</p>
+                </div>
+                <div class="col-lg-6 img-bg" style="background-image: url({% static 'img/word-of-chairman-photo.png' %});" data-aos="zoom-in"
+                data-aos-delay="100"></div>
+            </div>
+        </div>
+    </section><!-- End Alt Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Партнеры</h2>
+        </div>
+        <section id='clients' class="clients">
+            <div class="container" data-aos="zoom-in">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-8.png' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-3.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-4.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-5.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-6.jpg' %}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section><!-- End Testimonials Section -->
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Стратегические партнеры</h2>
+        </div>
+        <section id='clients' class="clients">
+            <div class="container" data-aos="zoom-in">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-10.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-2.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-7.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-9.png' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section><!-- End Testimonials Section -->
+{% endblock content %}

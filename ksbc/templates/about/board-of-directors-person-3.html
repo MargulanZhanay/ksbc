@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock title %}
+{% block content %}
+
+        <!-- ======= Breadcrumbs ======= -->
+        <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{% static 'img/breadcrumbs-bg.jpg' %}');">
+            <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+                <h2>Совет Директоров</h2>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Совет Директоров</li>
+                </ol>
+
+            </div>
+        </div><!-- End Breadcrumbs -->
+
+        <!-- ======= Blog Section ======= -->
+        <section id="alt-services" class="alt-services">
+            <div class="container" data-aos="fade-up">
+                <div class="row justify-content-around gy-4">
+                    <div class="col-lg-6 img-bg" style="background-image: url('{% static 'img/people/person-3.jpg' %}');"
+                        data-aos="zoom-in" data-aos-delay="100"></div>
+                    <div class="col-lg-5 d-flex flex-column justify-content-center">
+                        <h3>Эрик Ю Ту Лим</h3>
+                        <h5>Директор</h5>
+                        <h5>eric.lim@ksbc.sg</h5>
+                        <p>Эрик Лим - опытный предприниматель с вдохновляющим видением и способностью объединять людей и
+                            проекты с невероятной легкостью и безупречным профессионализмом.<br><br>
+
+                            Он был исполнительным директором Chemical Industries (Дальний Восток) Ltd (“CIFEL”) более 20
+                            лет. За время своего пребывания в должности он обеспечил рост и расширение компании, чтобы
+                            она стала такой, какой является сегодня.<br><br>
+
+                            Помимо своей важной роли в CIFEL, он также помог многим компаниям и деловым партнерам
+                            экспоненциально расти в их бизнесе на местном уровне и за рубежом, охватывая различные
+                            отрасли, иногда по финансовым соображениям, но чаще всего из альтруистических побуждений.
+                            <br><br>
+
+                            Эрик также хорошо известен своими обширными деловыми и политическими связями, включая
+                            корпоративных лидеров как на местном, так и на международном уровнях, а также тесными
+                            отношениями с зарубежными светилами самого высокого уровня. Любимый сверстниками и друзьями,
+                            Эрик отличается тем, что умеет выявлять лучшее в людях, с которыми работает.
+                            <br><br>
+
+                            Он окончил NUS и Гарвардский университет.
+                        <br><br><br></p>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Alt Services Section -->
+        {% endblock content %}

@@ -15,6 +15,46 @@ class OurStructureView(TemplateView):
     template_name = 'about/our-structure.html'
 
 
+class MissionView(TemplateView):
+    template_name = 'about/mission.html'
+
+
+class VisionView(TemplateView):
+    template_name = 'about/vision.html'
+
+
+class WordOfChairmanView(TemplateView):
+    template_name = 'about/word_of_chairman.html'
+
+
+class BoardDirectorsView(TemplateView):
+    template_name = 'about/board_directors.html'
+
+
+class SultanView(TemplateView):
+    template_name = 'about/board-of-directors-person-1.html'
+
+
+class VincentView(TemplateView):
+    template_name = 'about/board-of-directors-person-2.html'
+
+
+class EricView(TemplateView):
+    template_name = 'about/board-of-directors-person-3.html'
+
+
+class OlzhasView(TemplateView):
+    template_name = 'about/board-of-directors-person-4.html'
+
+
+class SeanView(TemplateView):
+    template_name = 'about/board-of-directors-person-5.html'
+
+
+class KennyView(TemplateView):
+    template_name = 'about/board-of-directors-person-6.html'
+
+
 def ContactUsView(request):
     if request.method == 'POST':
         first_name = request.POST['first_name']

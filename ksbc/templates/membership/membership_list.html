@@ -5,10 +5,10 @@
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
         <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-            <h2>Membership</h2>
+            <h2>Членство</h2>
             <ol>
-            <li><a href="{% url 'about:index' %}">Home</a></li>
-            <li>Membership</li>
+            <li><a href="{% url 'about:index' %}">Главная страница</a></li>
+            <li>Членство</li>
             </ol>
         </div>
     </div><!-- End Breadcrumbs -->
@@ -18,7 +18,6 @@
         <div class="container" data-aos="fade-up">
             <div class="section-header">
                 <h2>Выберите тип членства</h2>
-                <p>KSBC — молодая организация, но наши члены — очень опытные предприниматели и руководители высшего звена в различных секторах экономики.</p>
             </div>
         </div>
     </div>
@@ -31,16 +30,16 @@
                         <div class="col-lg-4 col-md-6 mt-4 mt-md-0 pb-4">
                             <div class="box featured">
                                 <h3>{{ object.membership_type}}</h3>
-                                <h4><sup>$</sup>{{ object.price }}<span> / year</span></h4>
+                                <h4><sup>$</sup>{{ object.price }}<span> / год</span></h4>
                                 <form method='POST' action='{% url 'membership:membership-list' %}'>
                                     {% csrf_token %}
                                     {% if object.membership_type != current_membership %}
                                         <div class="btn-wrap">
-                                            <button class="btn-buy">More Info</button>
+                                            <button class="btn-buy">Узнать больше</button>
                                         </div>
                                     {% else %}
                                         <div class="btn-wrap">
-                                            <span>This is your current membership</span>
+                                            <span>Это ваше текущее членство</span>
                                         </div>
                                     {% endif %}
                                     <input type='hidden' name='membership_type' value='{{ object.membership_type }}'>

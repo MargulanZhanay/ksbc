@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock title %}
+{% block content %}
+        <!-- ======= Breadcrumbs ======= -->
+        <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{% static 'img/breadcrumbs-bg.jpg' %}');">
+            <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+                <h2>Совет Директоров</h2>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Совет Директоров</li>
+                </ol>
+
+            </div>
+        </div><!-- End Breadcrumbs -->
+
+        <!-- ======= Blog Section ======= -->
+        <section id="alt-services" class="alt-services">
+            <div class="container" data-aos="fade-up">
+                <div class="row justify-content-around gy-4">
+                    <div class="col-lg-6 img-bg" style="background-image: url('{% static 'img/people/person-4.jpg' %}');"
+                        data-aos="zoom-in" data-aos-delay="100"></div>
+                    <div class="col-lg-5 d-flex flex-column justify-content-center">
+                        <h3>Олжас Жиенкулов</h3>
+                        <h5>Директор</h5>
+                        <h5>oz@ksbc.sg</h5>
+                        <p>Олжас - предприниматель, филантроп и влиятельный инвестор с более чем 15-летним опытом работы
+                            в области управления активами, страхования, брокерской деятельности, инвестиционной
+                            стратегии, финансового моделирования, борьбы с отмыванием денег, исследований компаний и
+                            отрасли, а также due diligence. Он выпускник бизнес-школы Байеса при Лондонском городском
+                            университете.<br><br>
+
+                            Он является основателем и генеральным директором Paladigm Capital со штаб-квартирой в
+                            Сингапуре, которая является надежным партнером для инвесторов, ищущих выгодные и прорывные
+                            инвестиционные возможности на приграничных рынках Центральной Азии и развивающихся
+                            экономиках Юго-Восточной Азии. Основанная с целью внести ясность в перенаселенный мир
+                            финансов, Paladigm Capital возглавляется опытными предпринимателями с проверенной
+                            репутацией, которые интегрируют и агрегируют инновационные финансовые решения для достижения
+                            инвестиционных целей при разумном управлении капиталом и рисками.
+                            https://www.paladigm.capital/<br><br>
+
+                            Основатель @ Tesla Capital Соучредитель @ UMAY Angels Club Forbes 30 до 30 лет<br><br>
+
+                            Лучший бизнес-ангел (Самый активный бизнес-ангел) по версии Центральноазиатского венчурного
+                            форума<br><br>
+
+                            Лауреат Президентской премии за вклад в развитие бизнеса 2022</p>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Alt Services Section -->
+        {% endblock content %}

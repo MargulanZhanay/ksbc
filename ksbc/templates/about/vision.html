@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock title %}
+{% block content %}
+{% load static %}
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
+        <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+            <h2>Видение</h2>
+            <ol>
+            <li><a href="{% url 'about:index' %}">Главная страница</a></li>
+            <li>Видение</li>
+            </ol>
+        </div>
+    </div><!-- End Breadcrumbs -->
+
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <article class="blog-details">
+                <div class="content">
+                    <p>
+                        С величайшей гордостью и непоколебимой решимостью мы заявляем о нашем дальновидном стремлении: стать непревзойденным лидером в развитии двустороннего делового сотрудничества между двумя великими нациями - Сингапуром и Казахстаном. В нашем стремлении к совершенству мы вступили на путь преобразований, кульминацией которого станет проявление наших грандиозных амбиций - стать выдающейся открытой платформой № 1, признанной во всем мире.
+                        <br><br>
+                        Наша миссия коренится в непоколебимом стремлении наладить прочные связи между деловыми сообществами Сингапура и Казахстана. Мы представляем себе ландшафт, где торговля не знает границ, а идеи выходят за рамки географических ограничений, где обе страны объединяют свои уникальные сильные стороны, чтобы создать мощную силу на мировом рынке.
+                        <br><br>
+                        Придерживаясь принципов "открытой платформы", мы стремимся создать инклюзивную экосистему, которая приветствует предпринимателей, новаторов и провидцев из всех слоев общества. Прозрачность, сотрудничество и взаимное уважение станут основой идеала нашей платформы, гарантируя, что все участники найдут равные возможности для процветания.
+                        <br><br>
+                        Чтобы достичь вершины признания, мы понимаем, что совершенство - это не конечная точка, а скорее непрерывное путешествие. Наши стратегии будут подкреплены передовыми технологиями, глубоким пониманием рынка и гибким, адаптивным подходом к меняющейся динамике. Мы будем постоянно развиваться, внедряя инновации и оставаясь на шаг впереди, чтобы лучше обслуживать наших уважаемых партнеров.
+                        <br><br>
+                        Более того, мы признаем, что предстоящий путь будет сопряжен с трудностями, однако мы твердо верим, что невзгоды служат катализатором роста и совершенствования. Наша решимость преодолевать препятствия и наша готовность извлекать уроки из неудач станут краеугольными камнями нашего конечного успеха.
+                        <br><br>
+                        Хотя нами движет стремление к амбициям, мы не упускаем из виду наши основные ценности и социальную ответственность, которую несем. Наша непоколебимая приверженность этическим принципам, экологической устойчивости и вовлечению общественности станет примером гармоничного баланса между ростом бизнеса и благосостоянием общества.
+                        <br><br>
+                        Путь к тому, чтобы стать непревзойденной платформой № 1 для двустороннего сотрудничества Сингапура и Казахстана, будет пройден с непоколебимой решимостью и неукротимым духом. Вместе, при неослабевающей поддержке наших уважаемых заинтересованных сторон и самоотверженности нашей динамичной команды, мы будем рисовать будущее с успехом, совершенством и взаимным процветанием.
+                        <br><br>
+                        <blockquote>
+                            <p>
+                                Наше виденье заключается в создании признанной открытой платформой №1 для двустороннего делового сотрудничества между Сингапуром и Казахстаном.
+                                <br><br>
+                                - Султан Маренов 
+                            </p>
+                        </blockquote>
+                        В заключение, давайте смело, рука об руку, двинемся навстречу будущему, в котором наши две нации будут едины в своем стремлении к величию. С благодарностью и духом товарищества мы смиренно отправляемся в это преобразующее путешествие, твердо устремив взгляд на горизонт достижений.
+                        <br><br>
+                        Искренне,
+                        <br>
+                        Секретариат KSBC
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Партнеры</h2>
+        </div>
+        <section id='clients' class="clients">
+            <div class="container" data-aos="zoom-in">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-8.png' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-3.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-4.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-5.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-6.jpg' %}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section><!-- End Testimonials Section -->
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Стратегические партнеры</h2>
+        </div>
+        <section id='clients' class="clients">
+            <div class="container" data-aos="zoom-in">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-10.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-2.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-7.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-9.png' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section><!-- End Testimonials Section -->
+
+{% endblock content %}

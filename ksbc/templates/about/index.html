@@ -9,8 +9,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
                     <h2 data-aos="fade-down">Добро пожаловать в <span>KSBC</span></h2>
-                    <p data-aos="fade-up">Kazakhstan-Singapore Business Council («KSBC») — некоммерческая организация, цель которой — стать связующим звеном и катализатором двустороннего делового сотрудничества между Сингапуром и Казахстаном, помогая предприятиям и частным лицам расширять свою сеть, получать эксклюзивную информацию о рынке и добиваться успеха в обеих странах.</p>
-                    <a data-aos="fade-up" data-aos-delay="200" href="membership.html" class="btn-get-started">Подать заявку на членство</a> <br>
+                    <p data-aos="fade-up">KSBC — молодая организация, но наши члены — очень опытные предприниматели и руководители высшего звена в различных секторах экономики.</p>
+                    <a data-aos="fade-up" data-aos-delay="200" href="{% url 'membership:membership-list' %}" class="btn-get-started">Подать заявку на членство</a> <br>
                     <a data-aos="fade-up" data-aos-delay="200" href="{% url 'users:login' %}" class="btn-get-started">Войти</a>
                 </div>
             </div>
@@ -40,10 +40,58 @@
     <div class="container" data-aos="fade-up">
       <div class="section-header">
         <h2>О KSBC</h2>
-        <p>KSBC — молодая организация, но наши члены — очень опытные предприниматели и руководители высшего звена в различных секторах экономики.</p>
+        <p data-aos="fade-up">Kazakhstan-Singapore Business Council («KSBC») — некоммерческая организация, цель которой — стать связующим звеном и катализатором двустороннего делового сотрудничества между Сингапуром и Казахстаном, помогая предприятиям и частным лицам расширять свою сеть, получать эксклюзивную информацию о рынке и добиваться успеха в обеих странах.</p>
       </div>
 
-    <div class="row gy-4">
+      <!-- ======= Alt Services Section ======= -->
+<section id="alt-services" class="alt-services">
+    <div class="container" data-aos="fade-up">
+        <div class="row justify-content-around gy-4">
+            <div class="col-lg-6 img-bg" style="background-image: url({% static 'img/alt-services.jpg' %});" data-aos="zoom-in"
+            data-aos-delay="100"></div>
+            <div class="col-lg-5 d-flex flex-column justify-content-center">
+                <h3>Kazakhstan Singapore Business Council</h3>
+                <p>Некоммерческая организация, целью которой является стать связующим звеном и катализатором двустороннего делового сотрудничества между Сингапуром и Казахстаном, помогая предприятиям и частным лицам расширять свою сеть, получать эксклюзивную рыночную информацию и добиваться успеха в обеих странах.
+                    <br><br>
+                    Признанные и поддерживаемые Посольством Республики Казахстан в Сингапуре и Посольством Республики Сингапур в Казахстане, мы организуем многочисленные сетевые мероприятия, бизнес-форумы, информационные семинары, общественные инициативы и поддерживаем ценные деловые отношения между нашими разнообразными членами - и все это с целью дать возможность каждому не не только открывают и развивают свой бизнес в обеих странах, но и ведут благополучную жизнь.</p>
+
+                <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
+                    <i class="bi bi-people flex-shrink-0"></i>
+                    <div>
+                    <h4><a class="stretched-link">Знакомства</a></h4>
+                    <p>Знакомство с культурами Сингапура и Казахстана</p>
+                    </div>
+                </div><!-- End Icon Box -->
+
+                <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
+                    <i class="bi bi-globe flex-shrink-0"></i>
+                    <div>
+                    <h4><a class="stretched-link">Культурное обогащение</a></h4>
+                    <p>Культурные мероприятия, такие как концерты, выставки, туристические туры</p>
+                    </div>
+                </div><!-- End Icon Box -->
+
+                <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+                    <i class="bi bi-newspaper flex-shrink-0"></i>
+                    <div>
+                    <h4><a class="stretched-link">Тематические следования</a></h4>
+                    <p>Знание об успехе Сингапура: тематические исследования, интервью, статьи, специальные мероприятия и многое другое</p>
+                    </div>
+                </div><!-- End Icon Box -->
+
+                <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+                    <i class="bi bi-patch-check flex-shrink-0"></i>
+                    <div>
+                    <h4><a class="stretched-link">Осведомленность</a></h4>
+                    <p>Больше информации о будущем Казахстана и текущих политических и экономических событиях</p>
+                    </div>
+                </div><!-- End Icon Box -->
+            </div>
+        </div>
+    </div>
+</section><!-- End Alt Services Section -->
+
+    <!-- <div class="row gy-4">
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="card-item">
                 <div class="row">
@@ -58,9 +106,9 @@
                     </div>
                 </div>
             </div>
-        </div><!-- End Card Item -->
+        </div> End Card Item -->
 
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="card-item">
                 <div class="row">
                     <div class="col-xl-5">
@@ -74,9 +122,9 @@
                     </div>
                 </div>
             </div>
-        </div><!-- End Card Item -->
+        </div> End Card Item -->
 
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="card-item">
                 <div class="row">
                     <div class="col-xl-5">
@@ -92,9 +140,9 @@
                     </div>
                 </div>
             </div>
-        </div><!-- End Card Item -->
+        </div> End Card Item -->
 
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="card-item">
                 <div class="row">
                     <div class="col-xl-5">
@@ -109,9 +157,9 @@
                         </div>
                     </div>
                 </div>
-            </div><!-- End Card Item -->
+            </div> End Card Item -->
         </div>
-    </div>
+    </div> 
 </section>
 <!-- ======= End Constructions Section ======= -->
 
@@ -119,19 +167,14 @@
 <section id="testimonials" class="testimonials section-bg">
     <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Partners</h2>
-          <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia
-            reprehenderit sunt deleniti</p>
+          <h2>Партнеры</h2>
         </div>
         <section id='clients' class="clients">
             <div class="container" data-aos="zoom-in">
                 <div class="row">
+                    <div class="col-lg-1"></div>
                     <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="{% static 'img/partners/partner-1.jpg' %}" class="img-fluid" alt="">
-                    </div>
-            
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="{% static 'img/partners/partner-2.jpg' %}" class="img-fluid" alt="">
+                        <img src="{% static 'img/partners/partner-8.png' %}" class="img-fluid" alt="">
                     </div>
             
                     <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
@@ -148,6 +191,37 @@
             
                     <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                         <img src="{% static 'img/partners/partner-6.jpg' %}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section><!-- End Testimonials Section -->
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Стратегические партнеры</h2>
+        </div>
+        <section id='clients' class="clients">
+            <div class="container" data-aos="zoom-in">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-10.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-2.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-7.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-9.png' %}" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>

@@ -5,10 +5,10 @@
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
         <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-            <h2>Profile</h2>
+            <h2>Профиль</h2>
             <ol>
-                <li><a href="{% url 'about:index' %}">Home</a></li>
-                <li>Profile</li>
+                <li><a href="{% url 'about:index' %}">Главная страница</a></li>
+                <li>Профиль</li>
             </ol>
         </div>
     </div><!-- End Breadcrumbs -->
@@ -35,11 +35,11 @@
                 <ul class="nav nav-tabs nav-tabs-bordered">
   
                   <li class="nav-item">
-                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Общее</button>
                   </li>
   
                   <li class="nav-item">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Редактировать профиль</button>
                   </li>
   
                   {% comment %} <li class="nav-item">
@@ -50,50 +50,50 @@
                 <div class="tab-content pt-2">
   
                   <div class="tab-pane fade show active profile-overview" id="profile-overview">
-                    <h5 class="card-title">Profile Details</h5>
+                    <h5 class="card-title">Данные профиля</h5>
                     
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 label ">Username</div>
+                        <div class="col-lg-3 col-md-4 label ">Имя пользователя</div>
                         <div class="col-lg-9 col-md-8">{{user.username}}</div>
                       </div>
 
                     <div class="row">
-                      <div class="col-lg-3 col-md-4 label ">Full Name</div>
+                      <div class="col-lg-3 col-md-4 label ">ФИО</div>
                       <div class="col-lg-9 col-md-8">{{user.first_name}} {{user.last_name}}</div>
                     </div>
   
                     <div class="row">
-                      <div class="col-lg-3 col-md-4 label">Company</div>
+                      <div class="col-lg-3 col-md-4 label">Название кампании</div>
                       <div class="col-lg-9 col-md-8">{{user.company_name}}</div>
                     </div>
   
                     <div class="row">
-                      <div class="col-lg-3 col-md-4 label">Job Positon</div>
+                      <div class="col-lg-3 col-md-4 label">Занимаемая должность</div>
                       <div class="col-lg-9 col-md-8">{{user.job_position}}</div>
                     </div>
   
                     <div class="row">
-                      <div class="col-lg-3 col-md-4 label">Email</div>
+                      <div class="col-lg-3 col-md-4 label">Электронная почта</div>
                       <div class="col-lg-9 col-md-8">{{user.email}}</div>
                     </div>
                     
-                    <h5 class='card-title'>Membership Details</h5>
+                    <h5 class='card-title'>Детали членства</h5>
                     <div class='row'>
                     {% if user_membership %}
-                        <div class="col-lg-3 col-md-4 label">Membership Type</div> 
+                        <div class="col-lg-3 col-md-4 label">Тип членства</div> 
                         <div class="col-lg-9 col-md-8">
                             {% if user_subscription %}
                                 {% if user_subscription.active %}
-                                    {{ user_membership.membership.membership_type }} <small>since {{ user_subscription.get_created_date }}</small>
-                                    <p>Next payment due: {{ user_subscription.get_next_billing_date }}</p>
-                                    <a href='{% url 'membership:cancel' %}'>Cancel membership</a>
+                                    {{ user_membership.membership.membership_type }} <small>с {{ user_subscription.get_created_date }}</small>
+                                    <p>Следующий платеж: {{ user_subscription.get_next_billing_date }}</p>
+                                    <a href='{% url 'membership:cancel' %}'>Отменить членство</a>
 
                                 {% else %}
-                                    <p>You don't have an active membership plan. Check them out here <a href='{% url 'membership:membership-list' %}'>Membership Plans</a></p>
+                                    <p>У вас нет активного членства. Ознакомьтесь с <a href='{% url 'membership:membership-list' %}'>членством здесь.</a></p>
                                 {% endif %} 
                             
                             {% else %}
-                                    <p>You don't have an active membership plan. Check them out here <a href='{% url 'membership:membership-list' %}'>Membership Plans</a></p>
+                                    <p>У вас нет активного членства. Ознакомьтесь с <a href='{% url 'membership:membership-list' %}'>членством здесь.</a></p>
                             {% endif %} 
                         </div>
                     </div>
@@ -107,35 +107,35 @@
                         {% csrf_token %}
                     
                         <div class="row mb-3">
-                            <label for="{{ form.first_name.id_for_label }}" class="col-md-4 col-lg-3 col-form-label">First Name</label>
+                            <label for="{{ form.first_name.id_for_label }}" class="col-md-4 col-lg-3 col-form-label">Имя</label>
                             <div class="col-md-8 col-lg-9">
                                 {{ form.first_name }}
                             </div>
                         </div>
                         
                         <div class="row mb-3">
-                            <label for="{{ form.last_name.id_for_label }}" class="col-md-4 col-lg-3 col-form-label">Last Name</label>
+                            <label for="{{ form.last_name.id_for_label }}" class="col-md-4 col-lg-3 col-form-label">Фамилия</label>
                             <div class="col-md-8 col-lg-9">
                                 {{ form.last_name }}
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label for="{{ form.company_name.id_for_label }}" class="col-md-4 col-lg-3 col-form-label">Company</label>
+                            <label for="{{ form.company_name.id_for_label }}" class="col-md-4 col-lg-3 col-form-label">Название компании</label>
                             <div class="col-md-8 col-lg-9">
                                 {{ form.company_name }}
                             </div>
                         </div>
                     
                         <div class="row mb-3">
-                            <label for="{{ form.job_position.id_for_label }}" class="col-md-4 col-lg-3 col-form-label">Job Position</label>
+                            <label for="{{ form.job_position.id_for_label }}" class="col-md-4 col-lg-3 col-form-label">Занимаемая должность</label>
                             <div class="col-md-8 col-lg-9">
                                 {{ form.job_position }}
                             </div>
                         </div>
                     
                         <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        <button type="submit" class="btn btn-primary">Сохранить изменения</button>
                         </div>
                     </form><!-- End Profile Edit Form -->
   

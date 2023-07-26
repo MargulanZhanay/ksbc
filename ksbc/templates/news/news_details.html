@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock title %}
+{% load static %}
+{% load thumbnail %}
+{% block content %}
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center"
+    style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>News Details</h2>
+        <ol>
+            <li><a href="index.html">Главная страница</a></li>
+            <li>News Details</li>
+        </ol>
+
+    </div>
+</div><!-- End Breadcrumbs -->
+<!-- ======= Blog Details Section ======= -->
+<section id="blog" class="blog">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-5">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <article class="blog-details">
+                    <div class="post-img">
+                        {% thumbnail news.image "600x396" crop="center" upscale=True as im %}
+                        <img src="{{ im.url }}" alt="" class="img-fluid">
+                        {% endthumbnail %}
+                    </div>
+
+                    <h2 class="title">{{ news.title }}</h2>
+
+                    <div class="meta-top">
+                        <ul>
+                            <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
+                                    href="blog-details.html"><time datetime="2020-01-01">{{news.pub_date|date:'M d, Y'}}</time></a>
+                            </li>
+                        </ul>
+                    </div><!-- End meta top -->
+
+                    <div class="content">
+                        <p>{{ news.text }}</p>
+                    </div><!-- End post content -->
+                </article><!-- End blog post -->
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+

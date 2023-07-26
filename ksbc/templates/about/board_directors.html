@@ -1,0 +1,292 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock title %}
+{% block content %}
+{% load static %}
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
+        <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+            <h2>Совет Директоров</h2>
+            <ol>
+            <li><a href="{% url 'about:index' %}">Главная страница</a></li>
+            <li>Совет Директоров</li>
+            </ol>
+        </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+  
+          <div class="row gy-4 posts-list">
+  
+            <div class="col-xl-4 col-md-6">
+              <div class="post-item position-relative h-100">
+  
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="{% static 'img/people/person-1.jpg' %}" class="img-fluid" alt="">
+                </div>
+  
+                <div class="post-content d-flex flex-column">
+  
+                  <h3 class="post-title">Султан Маренов</h3>
+  
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i> <span class="ps-2">SNRG Capital</span>
+                    </div>
+                  </div>
+  
+                  <p>
+                    Опытный предприниматель и профессиональный банкир с обширным опытом работы в сфере коммерческого банкинга, микрофинансирования, финтех-технологий и управления проектами.
+                  </p>
+  
+                  <hr>
+  
+                  <a href="{% url 'about:sultan-marenov' %}" class="readmore stretched-link"><span>Подробнее</span><i
+                      class="bi bi-arrow-right"></i></a>
+  
+                </div>
+  
+              </div>
+            </div><!-- End post list item -->
+  
+            <div class="col-xl-4 col-md-6">
+              <div class="post-item position-relative h-100">
+  
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="{% static 'img/people/person-2.jpg' %}" class="img-fluid" alt="">
+                </div>
+  
+                <div class="post-content d-flex flex-column">
+  
+                  <h3 class="post-title">Винсент Ло Венг Сенг</h3>
+  
+                  <div class="meta d-flex align-items-center">
+                    
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i> <span class="ps-2">CPG International</span>
+                    </div>
+                  </div>
+  
+                  <p>
+                    Винсент Ло в качестве генерального директора CPG International Pte Ltd возглавляет
+                            международное подразделение CPG Corporation Pte Ltd, а в качестве исполнительного
+                            вице-президента по развитию бизнеса CPG Corporation Pte Ltd курирует деятельность CPG по
+                            развитию бизнеса по всему миру.
+                  </p>
+  
+                  <hr>
+  
+                  <a href="{% url 'about:vincent-loh' %}" class="readmore stretched-link"><span>Подробнее</span><i
+                      class="bi bi-arrow-right"></i></a>
+  
+                </div>
+  
+              </div>
+            </div><!-- End post list item -->
+  
+            <div class="col-xl-4 col-md-6">
+              <div class="post-item position-relative h-100">
+  
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="{% static 'img/people/person-3.jpg' %}" class="img-fluid" alt="">
+                </div>
+  
+                <div class="post-content d-flex flex-column">
+  
+                  <h3 class="post-title">Эрик Ю Ту Лим</h3>
+  
+                  <div class="meta d-flex align-items-center">
+                    
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i> <span class="ps-2">ICG</span>
+                    </div>
+                  </div>
+  
+                  <p>
+                    Эрик Лим - опытный предприниматель с вдохновляющим видением и способностью объединять людей и
+                            проекты с невероятной легкостью и безупречным профессионализмом.
+                  </p>
+  
+                  <hr>
+  
+                  <a href="{% url 'about:eric-yew' %}" class="readmore stretched-link"><span>Подробнее</span><i
+                      class="bi bi-arrow-right"></i></a>
+  
+                </div>
+  
+              </div>
+            </div><!-- End post list item -->
+  
+            <div class="col-xl-4 col-md-6">
+              <div class="post-item position-relative h-100">
+  
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="{% static 'img/people/person-4.jpg' %}" class="img-fluid" alt="">
+                </div>
+  
+                <div class="post-content d-flex flex-column">
+  
+                  <h3 class="post-title">Олжас Жиенкулов</h3>
+  
+                  <div class="meta d-flex align-items-center">
+                    
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i> <span class="ps-2">Paladigm Capital</span>
+                    </div>
+                  </div>
+  
+                  <p>
+                    Олжас - предприниматель, филантроп и влиятельный инвестор с более чем 15-летним опытом работы в области управления активами, страхования, брокерской деятельности, инвестиционной стратегии, финансового моделирования, борьбы с отмыванием денег, исследований компаний и отрасли, а также due diligence. Он выпускник бизнес-школы Байеса при Лондонском городском университете.
+
+                  </p>
+  
+                  <hr>
+  
+                  <a href="{% url 'about:olzhas-zhiyenkulov' %}" class="readmore stretched-link"><span>Подробнее</span><i
+                      class="bi bi-arrow-right"></i></a>
+  
+                </div>
+  
+              </div>
+            </div><!-- End post list item -->
+  
+            <div class="col-xl-4 col-md-6">
+              <div class="post-item position-relative h-100">
+  
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="{% static 'img/people/person-5.jpg' %}" class="img-fluid" alt="">
+                </div>
+  
+                <div class="post-content d-flex flex-column">
+  
+                  <h3 class="post-title">Шон Со Чун Чонг</h3>
+  
+                  <div class="meta d-flex align-items-center">
+                    
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i> <span class="ps-2">CPG International</span>
+                    </div>
+                  </div>
+  
+                  <p>
+                    Будучи вице-президентом CPG International, Шон Со играет важную роль в реализации стратегий и
+                            создании возможностей для глобального развития бизнеса и значимого сотрудничества.
+                  </p>
+  
+                  <hr>
+  
+                  <a href="{% url 'about:sean-soh' %}" class="readmore stretched-link"><span>Подробнее</span><i
+                      class="bi bi-arrow-right"></i></a>
+  
+                </div>
+  
+              </div>
+            </div><!-- End post list item -->
+  
+            <div class="col-xl-4 col-md-6">
+              <div class="post-item position-relative h-100">
+  
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="{% static 'img/people/person-6.jpg' %}" class="img-fluid" alt="">
+                </div>
+  
+                <div class="post-content d-flex flex-column">
+  
+                  <h3 class="post-title">Кенни Нг</h3>
+  
+                  <div class="meta d-flex align-items-center">
+                    
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i> <span class="ps-2">Oakwood & Drehem Capital</span>
+                    </div>
+                  </div>
+  
+                  <p>
+                    Кенни Нг является управляющим директором Oakwood & Drehem Capital Pte Ltd и Vaulte Capital,
+                            компаний, специализирующихся на соблюдении конкурентных требований, корпоративных финансах и
+                            экспертной оценке, с признанным присутствием на ключевых рынках Юго-Восточной Азии.
+                  </p>
+  
+                  <hr>
+  
+                  <a href="{% url 'about:kenny-ng' %}" class="readmore stretched-link"><span>Подробнее</span><i
+                      class="bi bi-arrow-right"></i></a>
+  
+                </div>
+  
+              </div>
+            </div><!-- End post list item -->
+  
+          </div><!-- End blog posts list -->
+  
+        </div>
+      </section><!-- End Blog Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Партнеры</h2>
+        </div>
+        <section id='clients' class="clients">
+            <div class="container" data-aos="zoom-in">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-8.png' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-3.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-4.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-5.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-6.jpg' %}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section><!-- End Testimonials Section -->
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Стратегические партнеры</h2>
+        </div>
+        <section id='clients' class="clients">
+            <div class="container" data-aos="zoom-in">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-10.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-2.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-7.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-9.png' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section><!-- End Testimonials Section -->
+
+{% endblock content %}

@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock title %}
+{% block content %}
+{% load static %}
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
+        <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+            <h2>Миссия</h2>
+            <ol>
+            <li><a href="{% url 'about:index' %}">Главная страница</a></li>
+            <li>Миссия</li>
+            </ol>
+        </div>
+    </div><!-- End Breadcrumbs -->
+
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <article class="blog-details">
+                <div class="content">
+                    <p>
+                        С большим энтузиазмом и чувством долга мы обращаемся к вам сегодня, чтобы рассказать о решающей роли Казахстанско-Сингапурского делового совета (KSBC) в развитии и укреплении бесценных деловых отношений между нашими уважаемыми сообществами. С непоколебимой преданностью делу KSBC стремится создать процветающий альянс между корпоративными структурами и отдельными членами, родом как из Казахстана, так и из Сингапура, преодолевая границы для содействия совместному росту и процветанию.
+                        <br><br>
+                        В основе нашей миссии лежит твердая вера в то, что успех наших начинаний будет иметь далеко идущие последствия для дальнейшего процветания обеих стран. Мы признаем, что в условиях быстро меняющегося глобального экономического ландшафта сотрудничество между странами является ключом к открытию новых рубежей роста. KSBC становится маяком синергии, используя присущие нашим членам сильные стороны и опыт, чтобы проложить путь к взаимовыгодному будущему.
+                        <br><br>
+                        Предоставляя платформу для налаживания связей и взаимодействия, KSBC выступает в качестве моста, соединяющего казахстанских и сингапурских предпринимателей, бизнес-структуры и профессионалов. С помощью наших тщательно организованных мероприятий, конференций и отраслевых встреч мы стремимся способствовать обмену знаниями, стратегическому партнерству и инвестиционным возможностям. Придерживаясь духа инклюзивности, мы поддерживаем разнообразие и культурный обмен, способствуя богатому набору идей и инновационному мышлению.
+                        <br><br>
+                        Важно признать, что успех KSBC идет рука об руку с процветанием наших компаний-членов и частных лиц. Наша приверженность построению долгосрочных отношений основана на принципах доверия, прозрачности и этичного поведения. Придерживаясь самых высоких стандартов деловой этики, мы стремимся создавать альянсы, построенные на прочном фундаменте добросовестности и добросовестных практик.
+                        <br><br>
+                        Поскольку мы вместе движемся к будущему совместного роста, мы призываем всех членов активно участвовать в различных инициативах и форумах, которые предлагает KSBC. Ваше участие не только укрепит перспективы вашего собственного бизнеса, но и внесет вклад в общее развитие Казахстана и Сингапура как процветающих экономических центров.
+                        <br><br>
+                        <blockquote>
+                            <p>
+                                KSBC будет развивать и укреплять бесценные деловые отношения между этим сообществом корпоративных и индивидуальных членов как из Казахстана, так и из Сингапура. 
+                                <br><br>
+                                Успех нашей миссии и цели только обеспечит дальнейшее процветание обеих стран!
+                                <br><br>
+                                - Султан Маренов 
+                            </p>
+                        </blockquote>
+                        В заключение, позвольте нам подтвердить нашу приверженность благородной миссии, которую представляет KSBC, - укреплению связей между Казахстаном и Сингапуром посредством взаимосвязанной сети деловых возможностей и плодотворного сотрудничества. Уверенно шагая в будущее, мы уверены, что коллективные усилия наших членов станут катализатором достижения беспрецедентного успеха и процветания.
+                        <br><br>
+                        Благодарим Вас за вашу неизменную поддержку и участие в Казахстанско-Сингапурском деловом совете. Вместе мы напишем захватывающую историю успеха на века.
+                        <br><br>
+                        Искренне,
+                        <br><br>
+                        Секретариат KSBC
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+
+
+    <!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Партнеры</h2>
+        </div>
+        <section id='clients' class="clients">
+            <div class="container" data-aos="zoom-in">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-8.png' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-3.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-4.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-5.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-6.jpg' %}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section><!-- End Testimonials Section -->
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Стратегические партнеры</h2>
+        </div>
+        <section id='clients' class="clients">
+            <div class="container" data-aos="zoom-in">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-10.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-2.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-7.jpg' %}" class="img-fluid" alt="">
+                    </div>
+            
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/partners/partner-9.png' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section><!-- End Testimonials Section -->
+
+{% endblock content %}

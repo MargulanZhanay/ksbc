@@ -7,114 +7,67 @@
         <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
             <h2>{{ selected_membership.membership_type }}</h2>
             <ol>
-            <li><a href="{% url 'about:index' %}">Home</a></li>
-            <li>Membership</li>
+            <li><a href="{% url 'about:index' %}">Главная страница</a></li>
+            <li>Членство</li>
             </ol>
         </div>
     </div><!-- End Breadcrumbs -->
 
-    <div class="container home_msg">
-        {% if user.is_authenticated %}
-          <form enctype="multipart/form-data" method="post" role="product_page" id="payment-form">
-            {% csrf_token %}
-            <h2>Hi! To pay, click on this button <button type="submit" class="btn btn-success" data-bind-href="pricing">Payment</button></h2>
-          </form>
-        {% else %}
-          <h2>You're not logged in...</h2><a href="{% url 'users:login' %}" class="btn btn-secondary">Log in</a>
-        {% endif %}
-    </div>
-
-
-    <section id="contact" class="contact">
+    <section id="blog" class="blog">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row g-5">
           <div class="col-lg-6">
             <article class="blog-details">
-              <h2 class="title">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</h2>
+              <h2 class="title">Польза членства в KSBC</h2>
               <div class="content">
-                <h3>Et quae iure vel ut odit alias.</h3>
-                <p>
-                    Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi
-                    praesentium. Aliquam et
-                    laboriosam eius aut nostrum quidem aliquid dicta.
-                    Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta.
-                    Est cum et quod
-                    quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
-                </p>
-
-                <p>
-                    Sit repellat hic cupiditate hic ut nemo. Quis nihil sunt non reiciendis. Sequi in
-                    accusamus harum vel
-                    aspernatur. Excepturi numquam nihil cumque odio. Et voluptate cupiditate.
-                </p>
-
-                <p>
-                    Sed quo laboriosam qui architecto. Occaecati repellendus omnis dicta inventore
-                    tempore provident
-                    voluptas mollitia aliquid. Id repellendus quia. Asperiores nihil magni dicta est
-                    suscipit
-                    perspiciatis. Voluptate ex rerum assumenda dolores nihil quaerat.
-                    Dolor porro tempora et quibusdam voluptas. Beatae aut at ad qui tempore corrupti
-                    velit quisquam rerum.
-                    Omnis dolorum exercitationem harum qui qui blanditiis neque.
-                    Iusto autem itaque. Repudiandae hic quae aspernatur ea neque qui. Architecto
-                    voluptatem magni. Vel
-                    magnam quod et tempora deleniti error rerum nihil tempora.
-                </p>
-
-                <h3>Et quae iure vel ut odit alias.</h3>
-                <p>
-                    Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit ut
-                    rerum atque. Optio
-                    provident dolores atque voluptatem rem excepturi molestiae qui. Voluptatem laborum
-                    omnis ullam
-                    quibusdam perspiciatis nulla nostrum. Voluptatum est libero eum nesciunt aliquid
-                    qui.
-                    Quia et suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt accusamus quia
-                    aut ratione
-                    aspernatur dolor. Sint harum eveniet dicta exercitationem minima. Exercitationem
-                    omnis asperiores
-                    natus aperiam dolor consequatur id ex sed. Quibusdam rerum dolores sint consequatur
-                    quidem ea.
-                    Beatae minima sunt libero soluta sapiente in rem assumenda. Et qui odit voluptatem.
-                    Cum quibusdam
-                    voluptatem voluptatem accusamus mollitia aut atque aut.
-                </p>
-
-                <h3>Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
-                <p>
-                    Rerum ea est assumenda pariatur quasi et quam. Facilis nam porro amet nostrum. In
-                    assumenda quia quae
-                    a id praesentium. Quos deleniti libero sed occaecati aut porro autem. Consectetur
-                    sed excepturi sint
-                    non placeat quia repellat incidunt labore. Autem facilis hic dolorum dolores vel.
-                    Consectetur quasi id et optio praesentium aut asperiores eaque aut. Explicabo omnis
-                    quibusdam esse. Ex
-                    libero illum iusto totam et ut aut blanditiis. Veritatis numquam ut illum ut a quam
-                    vitae.
-                </p>
-
-                <p>
-                    Alias quia non aliquid. Eos et ea velit. Voluptatem maxime enim omnis ipsa voluptas
-                    incidunt. Nulla
-                    sit eaque mollitia nisi asperiores est veniam.
-                </p>
+                <ul>
+                  <li>Актуальная информация о наиболее интересных бизнес-проектах в Казахстане.</li>
+                  <li>Бизнес-дайджест, охватывающий рынки Казахстана, Сингапура и Юго-Восточной Азии на ежеквартальной основе (позже ежемесячно).</li>
+                  <li>Налаживание связей и поиск деловых партнеров. Деловые и светские мероприятия.</li>
+                  <li>Информация о различных конференциях и форумах в обеих странах. Приглашение и участие.</li>
+                  <li>Бизнес-аналитика.</li>
+                  <li>Консультации по организации бизнеса (юридические и корпоративные) как в Казахстане, так и в Сингапуре.</li>
+                  <li>Продвижение различных проектов. Встречи на высоком уровне, презентации и семинары.</li>
+                  <li>Академические исследования и участие в мероприятиях в партнерстве с Сингапурским университетом менеджмента (SMU).</li>
+                  <li>Помощь в переезде в Казахстан или Сингапур.</li>
+                </ul>
               </div><!-- End post content -->
             </article><!-- End blog post -->
           </div>
           <div class="col-lg-6">
-            <h3>Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
+            <h3>Прежде чем оплатить членство, заполните форму</h3>
 
             <br>
 
             <div class="btn-wrap">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwSn7sei3eB_JMB_YpZ3270ePNasOSdAfcjE3ZEB5XN0pXBQ/viewform" class="btn-buy">Fill the Form</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwSn7sei3eB_JMB_YpZ3270ePNasOSdAfcjE3ZEB5XN0pXBQ/viewform" class="btn-buy">Заполнить форму</a>
             </div>
             <br>
             <form enctype="multipart/form-data" method="post" role="product_page" id="payment-form" class='btn-wrap'>
               {% csrf_token %}
-              <button type="submit" class="btn-buy" data-bind-href="pricing">Buy Now</button>
+              <button type="submit" class="btn-buy" data-bind-href="pricing">Оплатить</button>
             </form>
+            <section id='blog' class='blog'>
+              <article class="blog-details">
+                <h4>Для вашей любезной справки, ниже приведен список привилегий членства <span class='text-danger'>для всех членов KSBC:</span></h4>
+                <ul>
+                  <li>Электронный сертификат участника;</li>
+                  <li>Появление на веб - странице каталога членства KSBC;s</li>
+                  <li>Возможность рекламировать и продвигать деятельность отдельных лиц / компаний на ежемесячной основе EDM KSBC;</li>
+                  <li>Воспользуйтесь специальным тарифом для участников на мероприятия KSBC с билетами.</li>
+                </ul>
+                <h4>Только <span class='text-danger'>для Corporate Sponsor Membership</span> предусмотрены следующие дополнительные привилегии:</h4>
+                <ul>
+                  <li>Отображение логотипа компании во всех публикациях KSBC и письменных сообщениях, будь то в печатных
+                    изданиях или онлайн;</li>
+                  <li>Место в Исполнительном комитете для назначенного представителя</li>
+                  <li>Права на рекламу (время от времени определяются Советом директоров);</li>
+                  <li>Воспользуйтесь двумя бесплатными абонементами и специальным тарифом для участников на мероприятия KSBC по билетам.</li>
+                </ul>
+              </article>
+            </section>
+
+            
           </div><!-- End Contact Form -->
         </div>
       </div>
