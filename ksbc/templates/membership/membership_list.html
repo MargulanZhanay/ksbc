@@ -13,30 +13,46 @@
         </div>
     </div><!-- End Breadcrumbs -->
 
-    <div class='container'>
-        {% if user.is_authenticated %}
-        <h1>Select a membership</h1>
-        <div class='row'>
-            {% for object in object_list %}
-                <div class='col-sm-4 col-md-4'>
-                    <h2>{{ object.membership_type }}</h2>
-                    <p>Price: ${{ object.price }}<small>/year</small></p>
-                    <form method='POST' action='{% url 'membership:membership-list' %}'>
-                        {% csrf_token %}
-                        {% if object.membership_type != current_membership %}
-                            <button class='btn btn-warning'>Select</button>
-                        {% else %}
-                            <small>This is your current membership</small>
-                        {% endif %}
-                        <input type='hidden' name='membership_type' value='{{object.membership_type}}'>
 
-                    </form>
-            
-                </div>
-            {% endfor %}
+    <div id="pricing" class="pricing">
+        <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <h2>Выберите тип членства</h2>
+                <p>KSBC — молодая организация, но наши члены — очень опытные предприниматели и руководители высшего звена в различных секторах экономики.</p>
+            </div>
         </div>
-        {% else %}
-            <h2>You're not logged in...</h2><a href="{% url 'users:login' %}" class="btn btn-secondary">Log in</a>
-        {% endif %}
+    </div>
+
+    <div id="pricing" class="pricing">
+        <div class="container" data-aos="fade-up">
+            {% if user.is_authenticated %}
+                <div class='row'>
+                    {% for object in object_list %}
+                        <div class="col-lg-4 col-md-6 mt-4 mt-md-0 pb-4">
+                            <div class="box featured">
+                                <h3>{{ object.membership_type}}</h3>
+                                <h4><sup>$</sup>{{ object.price }}<span> / year</span></h4>
+                                <form method='POST' action='{% url 'membership:membership-list' %}'>
+                                    {% csrf_token %}
+                                    {% if object.membership_type != current_membership %}
+                                        <div class="btn-wrap">
+                                            <button class="btn-buy">More Info</button>
+                                        </div>
+                                    {% else %}
+                                        <div class="btn-wrap">
+                                            <span>This is your current membership</span>
+                                        </div>
+                                    {% endif %}
+                                    <input type='hidden' name='membership_type' value='{{ object.membership_type }}'>
+                                </form>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+
+
+        </div>
     </div>
 {% endblock content %}

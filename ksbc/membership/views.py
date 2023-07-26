@@ -87,6 +87,7 @@ class MembershipSelectView(ListView):
 def product_page(request):
     stripe.api_key = settings.STRIPE_SECRET_KEY
     selected_membership = None
+    selected_membership = get_selected_membership(request)
     if request.method == 'POST':
         selected_membership = get_selected_membership(request)
         price = selected_membership.stripe_plan_id
