@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.decorators.cache import cache_page
 from .models import Events
 
-EVENTS_PER_PAGE = 6
+EVENTS_PER_PAGE = 9
 CACHE_SECONDS = 20
 
 

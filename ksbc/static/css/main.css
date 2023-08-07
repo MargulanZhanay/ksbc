@@ -106,6 +106,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 0;
   }
   
   .breadcrumbs:before {
@@ -273,6 +274,10 @@
   /*--------------------------------------------------------------
   # Desktop Navigation
   --------------------------------------------------------------*/
+  .navbar-container{
+    background-color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
   @media (min-width: 1280px) {
     .navbar {
       padding: 0;
@@ -1998,6 +2003,10 @@
     margin-top: 30px;
     color: #838893;
   }
+
+  .indented-text{
+    white-space: pre-line;
+  }
   
   .blog .blog-pagination ul {
     display: flex;
@@ -2017,17 +2026,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 30px; /* Add a fixed width to ensure consistency */	
+    text-align: center; /* Center the content horizontally */	
+    margin: 0 5px;
   }
   
-  .blog .blog-pagination li.active,
-  .blog .blog-pagination li:hover {
+  .blog .blog-pagination li.active {
     background: var(--color-primary);
     color: #fff;
+    padding: 7px 16px;
   }
   
   .blog .blog-pagination li.active a,
   .blog .blog-pagination li:hover a {
     color: var(--color-white);
+    padding: 7px 8px;
   }
   
   /*--------------------------------------------------------------
@@ -2714,7 +2727,7 @@
     transition: all 0.4s ease-in-out;
     display: inline-block;
     padding: 15px 0;
-    filter: grayscale(100);
+
   }
 
   .clients img:hover {

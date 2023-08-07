@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}{% endblock title %}
+{% block title %}{{ selected_membership.membership_type }}{% endblock title %}
 {% block content %}
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
@@ -8,7 +8,7 @@
             <h2>{{ selected_membership.membership_type }}</h2>
             <ol>
             <li><a href="{% url 'about:index' %}">Главная страница</a></li>
-            <li>Членство</li>
+            <li>Резиденство</li>
             </ol>
         </div>
     </div><!-- End Breadcrumbs -->
@@ -18,7 +18,7 @@
         <div class="row g-5">
           <div class="col-lg-6">
             <article class="blog-details">
-              <h2 class="title">Польза членства в KSBC</h2>
+              <h2 class="title">Польза резиденства в KSBC</h2>
               <div class="content">
                 <ul>
                   <li>Актуальная информация о наиболее интересных бизнес-проектах в Казахстане.</li>
@@ -35,7 +35,7 @@
             </article><!-- End blog post -->
           </div>
           <div class="col-lg-6">
-            <h3>Прежде чем оплатить членство, заполните форму</h3>
+            <h3>Прежде чем оплатить резиденство, заполните форму</h3>
 
             <br>
 
@@ -49,7 +49,7 @@
             </form>
             <section id='blog' class='blog'>
               <article class="blog-details">
-                <h4>Для вашей любезной справки, ниже приведен список привилегий членства <span class='text-danger'>для всех членов KSBC:</span></h4>
+                <h4>Для вашей любезной справки, ниже приведен список привилегий резиденства <span class='text-danger'>для всех членов KSBC:</span></h4>
                 <ul>
                   <li>Электронный сертификат участника;</li>
                   <li>Появление на веб - странице каталога членства KSBC;s</li>

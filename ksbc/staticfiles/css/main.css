@@ -272,6 +272,11 @@
   /*--------------------------------------------------------------
   # Desktop Navigation
   --------------------------------------------------------------*/
+  .navbar-container{	
+    background-color: white;	
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Add a box shadow */	
+  }
+
   @media (min-width: 1280px) {
     .navbar {
       padding: 0;
@@ -303,7 +308,7 @@
       font-family: var(--font-primary);
       font-size: 14px;
       font-weight: 500;
-      color: rgba(255, 255, 255, 0.6);
+      color: var(--color-secondary);
       text-transform: uppercase;
       white-space: nowrap;
       transition: 0.3s;
@@ -341,7 +346,7 @@
     .navbar .active,
     .navbar .active:focus,
     .navbar li:hover>a {
-      color: #fff;
+      color: var(--color-primary);
     }
   
     .navbar .dropdown ul {
@@ -2713,7 +2718,6 @@
     transition: all 0.4s ease-in-out;
     display: inline-block;
     padding: 15px 0;
-    filter: grayscale(100);
   }
 
   .clients img:hover {

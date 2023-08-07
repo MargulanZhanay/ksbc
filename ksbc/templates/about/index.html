@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}{% endblock title %}
+{% block title %}Главная страница{% endblock title %}
 {% block content %}
 {% load static %}
 <!-- ======= Hero Section ======= -->
@@ -10,7 +10,7 @@
                 <div class="col-lg-6 text-center">
                     <h2 data-aos="fade-down">Добро пожаловать в <span>KSBC</span></h2>
                     <p data-aos="fade-up">KSBC — молодая организация, но наши члены — очень опытные предприниматели и руководители высшего звена в различных секторах экономики.</p>
-                    <a data-aos="fade-up" data-aos-delay="200" href="{% url 'membership:membership-list' %}" class="btn-get-started">Подать заявку на членство</a> <br>
+                    <a data-aos="fade-up" data-aos-delay="200" href="{% url 'membership:membership-list' %}" class="btn-get-started">Подать заявку на резиденство</a> <br>
                     <a data-aos="fade-up" data-aos-delay="200" href="{% url 'users:login' %}" class="btn-get-started">Войти</a>
                 </div>
             </div>

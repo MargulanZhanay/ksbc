@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}{% endblock %}
+{% block title %}Профиль{% endblock %}
 {% block content %}
 {% load static %}
     <!-- ======= Breadcrumbs ======= -->
@@ -77,23 +77,23 @@
                       <div class="col-lg-9 col-md-8">{{user.email}}</div>
                     </div>
                     
-                    <h5 class='card-title'>Детали членства</h5>
+                    <h5 class='card-title'>Детали резиденства</h5>
                     <div class='row'>
                     {% if user_membership %}
-                        <div class="col-lg-3 col-md-4 label">Тип членства</div> 
+                        <div class="col-lg-3 col-md-4 label">Тип резиденства</div> 
                         <div class="col-lg-9 col-md-8">
                             {% if user_subscription %}
                                 {% if user_subscription.active %}
                                     {{ user_membership.membership.membership_type }} <small>с {{ user_subscription.get_created_date }}</small>
                                     <p>Следующий платеж: {{ user_subscription.get_next_billing_date }}</p>
-                                    <a href='{% url 'membership:cancel' %}'>Отменить членство</a>
+                                    <a href='{% url 'membership:cancel' %}'>Отменить резиденство</a>
 
                                 {% else %}
-                                    <p>У вас нет активного членства. Ознакомьтесь с <a href='{% url 'membership:membership-list' %}'>членством здесь.</a></p>
+                                    <p>У вас нет активного резиденства. Ознакомьтесь с <a href='{% url 'membership:membership-list' %}'>резиденством здесь.</a></p>
                                 {% endif %} 
                             
                             {% else %}
-                                    <p>У вас нет активного членства. Ознакомьтесь с <a href='{% url 'membership:membership-list' %}'>членством здесь.</a></p>
+                                    <p>У вас нет активного резиденства. Ознакомьтесь с <a href='{% url 'membership:membership-list' %}'>резиденством здесь.</a></p>
                             {% endif %} 
                         </div>
                     </div>

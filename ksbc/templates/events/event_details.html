@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}{% endblock title %}
+{% block title %}{{ event.title }}{% endblock title %}
 {% load static %}
 {% load thumbnail %}
 {% block content %}
@@ -33,16 +33,18 @@
 
                     <div class="meta-top">
                         <ul>
-                            <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                    href="blog-details.html"><time datetime="2020-01-01">{{event.pub_date|date:'M d, Y'}}</time></a>
+                            <li class="d-flex align-items-center"><i class="bi bi-clock"></i>
+                                <time datetime="2020-01-01">{{event.pub_date|date:'M d, Y'}}</time>
                             </li>
                         </ul>
                     </div><!-- End meta top -->
 
                     <div class="content">
-                        <p>{{ event.text }}</p>
-                        <div class="btn-wrap">
-                            <a href="{{ event.url }}" class="btn-buy">Зарегистрироваться</a>
+                        <div class='indented-text'>
+                            <p>{{ event.text }}</p>
+                            <div class="btn-wrap">
+                                <a href="{{ event.url }}" class="btn-buy">Зарегистрироваться</a>
+                            </div>
                         </div>
                     </div><!-- End post content -->
                 </article><!-- End blog post -->

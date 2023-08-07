@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.decorators.cache import cache_page
 from .models import News
 
-NEWS_PER_PAGE = 6  # Number of news in a page.
+NEWS_PER_PAGE = 9  # Number of news in a page.
 CACHE_SECONDS = 20
 
 
@@ -11,7 +11,7 @@ CACHE_SECONDS = 20
 def news(request):
     news_list = News.objects.order_by('-pub_date')
     paginator = Paginator(news_list, NEWS_PER_PAGE)
-    page_number = request.POST.get('page')
+    page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     context = {
         'page_obj': page_obj,
