@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Вход{% endblock title %}
+{% load i18n %}
+{% block title %}{% trans "Вход" %}{% endblock title %}
 {% block content %}
 <!-- ======= Breadcrumbs ======= -->
 <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-      <h2>Вход</h2>
+      <h2>{% trans "Вход" %}</h2>
       <ol>
-        <li><a href="{% url 'about:index' %}">Главная страница</a></li>
-        <li>Вход</li>
+        <li><a href="{% url 'about:index' %}">{% trans "Главная страница" %}</a></li>
+        <li>{% trans "Вход" %}</li>
       </ol>
 
     </div>
@@ -43,7 +44,7 @@
                                 style="width: 100%;" alt="logo">
                             </div>
             
-                            <p class="text-black-50 mb-5 pt-5">Пожалуйста, введите адрес электронной почты и пароль!</p>
+                            <p class="text-black-50 mb-5 pt-5">{% trans "Пожалуйста, введите адрес электронной почты и пароль!" %}</p>
             
                             <form action='{% url 'users:login' %}' method=POST>
                                 {% csrf_token %}
@@ -66,14 +67,14 @@
                                     </div>
                                 {% endfor %}
             
-                                <p class="small mb-5 pb-lg-2"><a class="text-black-50" href="{% url 'users:reset_password' %}">Забыли пароль?</a></p>
+                                <p class="small mb-5 pb-lg-2"><a class="text-black-50" href="{% url 'users:reset_password' %}">{% trans "Забыли пароль?" %}</a></p>
             
                                 <input type='submit' value='Войти' class='btn btn-outline-danger btn-lg px-5'>
                                 </form>
                         </div>
             
                         <div>
-                            <p class="mb-0">У вас нет аккаунта? <a href="{% url 'users:signup' %}" class="text-black-50 fw-bold">Зарегистрироваться</a>
+                            <p class="mb-0">{% trans "У вас нет аккаунта?" %} <a href="{% url 'users:signup' %}" class="text-black-50 fw-bold">{% trans "Зарегистрироваться" %}</a>
                             </p>
                         </div>
                     </div>

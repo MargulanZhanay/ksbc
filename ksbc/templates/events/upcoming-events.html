@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% load thumbnail %}
-{% block title %}Предстоящие события{% endblock title %}
+{% load i18n %}
+{% block title %}{% trans "Предстоящие события" %}{% endblock title %}
 {% block content %}
 {% load static %}
 <!-- ======= Breadcrumbs ======= -->
 <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-        <h2>Предстоящие события</h2>
+        <h2>{% trans "Предстоящие события" %}</h2>
         <ol>
-        <li><a href="{% url 'about:index' %}">Главная страница</a></li>
-        <li>Предстоящие события</li>
+        <li><a href="{% url 'about:index' %}">{% trans "Главная страница" %}</a></li>
+        <li>{% trans "Предстоящие события" %}</li>
         </ol>
     </div>
 </div><!-- End Breadcrumbs -->
@@ -36,7 +37,7 @@
                                 </p>
                                 <hr>
 
-                                <a href="{% url 'events:events-details' events_id=event.id %}" class="readmore stretched-link"><span>Подробнее</span><i
+                                <a href="{% url 'events:events-details' events_id=event.id %}" class="readmore stretched-link"><span>{% trans "Подробнее" %}</span><i
                                     class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>

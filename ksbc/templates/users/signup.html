@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Зарегистрироваться{% endblock title %}
+{% load i18n %}
+{% block title %}{% trans "Зарегистрироваться" %}{% endblock title %}
 {% block content %}
 <!-- ======= Breadcrumbs ======= -->
 <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-      <h2>Зарегистрироваться</h2>
+      <h2>{% trans "Зарегистрироваться" %}</h2>
       <ol>
-        <li><a href="{% url 'about:index' %}">Главная страница</a></li>
-        <li>Зарегистрироваться</li>
+        <li><a href="{% url 'about:index' %}">{% trans "Главная страница" %}</a></li>
+        <li>{% trans "Зарегистрироваться" %}</li>
       </ol>
 
     </div>
@@ -45,7 +46,7 @@
                                 style="width: 100%;" alt="logo">
                             </div>
             
-                            <p class="text-black-50 mb-5 pt-5">Пожалуйста, заполните форму для регистрации!</p>
+                            <p class="text-black-50 mb-5 pt-5">{% trans "Пожалуйста, заполните форму для регистрации!" %}</p>
                             
                             <form action='{% url 'users:signup' %}' method=POST>
                                 {% csrf_token %}

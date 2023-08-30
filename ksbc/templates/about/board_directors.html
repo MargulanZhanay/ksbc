@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
-{% block title %}Совет Директоров{% endblock title %}
+{% load i18n %}
+{% block title %}{% trans "Совет Директоров" %}{% endblock title %}
 {% block content %}
 {% load static %}
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
         <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-            <h2>Совет Директоров</h2>
+            <h2>{% trans "Совет Директоров" %}</h2>
             <ol>
-            <li><a href="{% url 'about:index' %}">Главная страница</a></li>
-            <li>Совет Директоров</li>
+            <li><a href="{% url 'about:index' %}">{% trans "Главная страница" %}</a></li>
+            <li>{% trans "Совет Директоров" %}</li>
             </ol>
         </div>
     </div><!-- End Breadcrumbs -->
@@ -28,7 +29,7 @@
   
                 <div class="post-content d-flex flex-column">
   
-                  <h3 class="post-title">Султан Маренов</h3>
+                  <h3 class="post-title">{% trans "Султан Маренов" %}</h3>
   
                   <div class="meta d-flex align-items-center">
                     <div class="d-flex align-items-center">
@@ -37,12 +38,12 @@
                   </div>
   
                   <p>
-                    Опытный предприниматель и профессиональный банкир с обширным опытом работы в сфере коммерческого банкинга, микрофинансирования, финтех-технологий и управления проектами.
+                    {% trans "Опытный предприниматель и профессиональный банкир с обширным опытом работы в сфере коммерческого банкинга, микрофинансирования, финтех-технологий и управления проектами." %}
                   </p>
   
                   <hr>
   
-                  <a href="{% url 'about:sultan-marenov' %}" class="readmore stretched-link"><span>Подробнее</span><i
+                  <a href="{% url 'about:sultan-marenov' %}" class="readmore stretched-link"><span>{% trans "Подробнее" %}</span><i
                       class="bi bi-arrow-right"></i></a>
   
                 </div>
@@ -59,7 +60,7 @@
   
                 <div class="post-content d-flex flex-column">
   
-                  <h3 class="post-title">Винсент Ло Венг Сенг</h3>
+                  <h3 class="post-title">{% trans "Винсент Ло Венг Сенг" %}</h3>
   
                   <div class="meta d-flex align-items-center">
                     
@@ -69,15 +70,12 @@
                   </div>
   
                   <p>
-                    Винсент Ло в качестве генерального директора CPG International Pte Ltd возглавляет
-                            международное подразделение CPG Corporation Pte Ltd, а в качестве исполнительного
-                            вице-президента по развитию бизнеса CPG Corporation Pte Ltd курирует деятельность CPG по
-                            развитию бизнеса по всему миру.
+                    {% trans "Винсент Ло в качестве генерального директора CPG International Pte Ltd возглавляет международное подразделение CPG Corporation Pte Ltd, а в качестве исполнительного вице-президента по развитию бизнеса CPG Corporation Pte Ltd курирует деятельность CPG по развитию бизнеса по всему миру." %}
                   </p>
   
                   <hr>
   
-                  <a href="{% url 'about:vincent-loh' %}" class="readmore stretched-link"><span>Подробнее</span><i
+                  <a href="{% url 'about:vincent-loh' %}" class="readmore stretched-link"><span>{% trans "Подробнее" %}</span><i
                       class="bi bi-arrow-right"></i></a>
   
                 </div>
@@ -94,7 +92,7 @@
   
                 <div class="post-content d-flex flex-column">
   
-                  <h3 class="post-title">Эрик Ю Ту Лим</h3>
+                  <h3 class="post-title">{% trans "Эрик Ю Ту Лим" %}</h3>
   
                   <div class="meta d-flex align-items-center">
                     
@@ -104,13 +102,12 @@
                   </div>
   
                   <p>
-                    Эрик Лим - опытный предприниматель с вдохновляющим видением и способностью объединять людей и
-                            проекты с невероятной легкостью и безупречным профессионализмом.
+                    {% trans "Эрик Лим - опытный предприниматель с вдохновляющим видением и способностью объединять людей и проекты с невероятной легкостью и безупречным профессионализмом." %}              
                   </p>
   
                   <hr>
   
-                  <a href="{% url 'about:eric-yew' %}" class="readmore stretched-link"><span>Подробнее</span><i
+                  <a href="{% url 'about:eric-yew' %}" class="readmore stretched-link"><span>{% trans "Подробнее" %}</span><i
                       class="bi bi-arrow-right"></i></a>
   
                 </div>
@@ -127,23 +124,22 @@
   
                 <div class="post-content d-flex flex-column">
   
-                  <h3 class="post-title">Олжас Жиенкулов</h3>
+                  <h3 class="post-title">{% trans "Олжас Жиенкулов" %}</h3>
   
                   <div class="meta d-flex align-items-center">
                     
                     <div class="d-flex align-items-center">
-                      <i class="bi bi-folder2"></i> <span class="ps-2">Paladigm Capital</span>
+                      <i class="bi bi-folder2"></i> <span class="ps-2">{% trans "Paladigm Capital" %}</span>
                     </div>
                   </div>
   
                   <p>
-                    Олжас - предприниматель, филантроп и влиятельный инвестор с более чем 15-летним опытом работы в области управления активами, страхования, брокерской деятельности, инвестиционной стратегии, финансового моделирования, борьбы с отмыванием денег, исследований компаний и отрасли, а также due diligence. Он выпускник бизнес-школы Байеса при Лондонском городском университете.
-
+                    {% trans "Олжас - предприниматель, филантроп и влиятельный инвестор с более чем 15-летним опытом работы в области управления активами, страхования, брокерской деятельности, инвестиционной стратегии, финансового моделирования, борьбы с отмыванием денег, исследований компаний и отрасли, а также due diligence. Он выпускник бизнес-школы Байеса при Лондонском городском университете." %}
                   </p>
   
                   <hr>
   
-                  <a href="{% url 'about:olzhas-zhiyenkulov' %}" class="readmore stretched-link"><span>Подробнее</span><i
+                  <a href="{% url 'about:olzhas-zhiyenkulov' %}" class="readmore stretched-link"><span>{% trans "Подробнее" %}</span><i
                       class="bi bi-arrow-right"></i></a>
   
                 </div>
@@ -160,7 +156,7 @@
   
                 <div class="post-content d-flex flex-column">
   
-                  <h3 class="post-title">Шон Со Чун Чонг</h3>
+                  <h3 class="post-title">{% trans "Шон Со Чун Чонг" %}</h3>
   
                   <div class="meta d-flex align-items-center">
                     
@@ -170,13 +166,12 @@
                   </div>
   
                   <p>
-                    Будучи вице-президентом CPG International, Шон Со играет важную роль в реализации стратегий и
-                            создании возможностей для глобального развития бизнеса и значимого сотрудничества.
+                    {% trans "Будучи вице-президентом CPG International, Шон Со играет важную роль в реализации стратегий и создании возможностей для глобального развития бизнеса и значимого сотрудничества." %}
                   </p>
   
                   <hr>
   
-                  <a href="{% url 'about:sean-soh' %}" class="readmore stretched-link"><span>Подробнее</span><i
+                  <a href="{% url 'about:sean-soh' %}" class="readmore stretched-link"><span>{% trans "Подробнее" %}</span><i
                       class="bi bi-arrow-right"></i></a>
   
                 </div>
@@ -193,7 +188,7 @@
   
                 <div class="post-content d-flex flex-column">
   
-                  <h3 class="post-title">Кенни Нг</h3>
+                  <h3 class="post-title">{% trans "Кенни Нг" %}</h3>
   
                   <div class="meta d-flex align-items-center">
                     
@@ -203,14 +198,12 @@
                   </div>
   
                   <p>
-                    Кенни Нг является управляющим директором Oakwood & Drehem Capital Pte Ltd и Vaulte Capital,
-                            компаний, специализирующихся на соблюдении конкурентных требований, корпоративных финансах и
-                            экспертной оценке, с признанным присутствием на ключевых рынках Юго-Восточной Азии.
+                    {% trans "Кенни Нг является управляющим директором Oakwood & Drehem Capital Pte Ltd и Vaulte Capital, компаний, специализирующихся на соблюдении конкурентных требований, корпоративных финансах и экспертной оценке, с признанным присутствием на ключевых рынках Юго-Восточной Азии." %}
                   </p>
   
                   <hr>
   
-                  <a href="{% url 'about:kenny-ng' %}" class="readmore stretched-link"><span>Подробнее</span><i
+                  <a href="{% url 'about:kenny-ng' %}" class="readmore stretched-link"><span>{% trans "Подробнее" %}</span><i
                       class="bi bi-arrow-right"></i></a>
   
                 </div>
@@ -227,7 +220,7 @@
 <section id="testimonials" class="testimonials section-bg">
     <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Партнеры</h2>
+          <h2>{% trans "Партнеры" %}</h2>
         </div>
         <section id='clients' class="clients">
             <div class="container" data-aos="zoom-in">
@@ -263,7 +256,7 @@
 <section id="testimonials" class="testimonials section-bg">
     <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Стратегические партнеры</h2>
+          <h2>{% trans "Стратегические партнеры" %}</h2>
         </div>
         <section id='clients' class="clients">
             <div class="container" data-aos="zoom-in">

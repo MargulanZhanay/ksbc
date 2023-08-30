@@ -1,79 +1,90 @@
 {% load static %}
+{% load i18n %}
 {% load active_link_tags %}
-<div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-  <a href="{% url 'about:index' %}" class="logo d-flex align-items-center">
-    <!-- Uncomment the line below if you also wish to use an image logo -->
-    <!-- <img src="{% static 'img/logo.png' %}" alt=""> -->
-    <img src='{% static 'img/logoksbc.png' %}'>
-  </a>
+<a href="{% url 'about:index' %}" class="logo d-flex align-items-center">
+  <!-- Uncomment the line below if you also wish to use an image logo -->
+  <!-- <img src="{% static 'img/logo.png' %}" alt=""> -->
+  <img src='{% static 'img/ksbc_logo.png' %}'>
+</a>
+<div class="container-fluid container-lg d-flex align-items-center justify-content-between">
 
   <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
   <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
   <nav id="navbar" class="navbar">
     <ul>
       <li class="dropdown">
-        <a href="#"><span>О KSBC</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <a href="#"><span>{% trans "О KSBC" %}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
         <ul>
             <li>
-                <a href="{% url 'about:index' %}">Главная страница</a>
+                <a href="{% url 'about:index' %}">{% trans "Главная страница" %}</a>
             </li>
             <li>
-                <a href="{% url 'about:mission' %}">Миссия</a>
+                <a href="{% url 'about:mission' %}">{% trans "Миссия" %}</a>
             </li>
             <li>
-              <a href="{% url 'about:vision' %}">Видение</a>
+              <a href="{% url 'about:vision' %}">{% trans "Видение" %}</a>
             </li>
             <li>
-              <a href="{% url 'about:word-of-chairman' %}">Слова Основателя</a>
+              <a href="{% url 'about:word-of-chairman' %}">{% trans "Слова Основателя" %}</a>
             </li>
             <li>
-              <a href="{% url 'about:board-directors' %}">Совет Директоров</a>
+              <a href="{% url 'about:board-directors' %}">{% trans "Совет Директоров" %}</a>
             </li>
         </ul>
       </li>
 
       <li>
-          <a href="{% url 'about:what-we-do' %}">Наши услуги</a>
+          <a href="{% url 'about:what-we-do' %}">{% trans "Наши услуги" %}</a>
       </li>
 
       <li>
-          <a href="{% url 'news:news' %}">Новости</a>
+          <a href="{% url 'news:news' %}">{% trans "Новости" %}</a>
       </li>
 
       <li>
-          <a href="{% url 'membership:membership-list' %}">Резидентсво</a>
+          <a href="{% url 'membership:membership-list' %}">{% trans "Резидентсво" %}</a>
       </li>
 
       <li>
-          <a href="{% url 'about:our-structure' %}">Наша структура</a>
+          <a href="{% url 'about:our-structure' %}">{% trans "Наша структура" %}</a>
       </li>
 
       <li class="dropdown">
-        <a href="#"><span>События</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <a href="#"><span>{% trans "События" %}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
         <ul>
             <li>
-                <a href="{% url 'events:upcoming_events' %}">Предстоящие события</a>
+                <a href="{% url 'events:upcoming_events' %}">{% trans "Предстоящие события" %}</a>
             </li>
             <li>
-                <a href="{% url 'events:past_events' %}">Прошедшие события</a>
+                <a href="{% url 'events:past_events' %}">{% trans "Прошедшие события" %}</a>
             </li>
         </ul>
       </li>
 
       <li>
-        <a href="https://www.flickr.com/photos/198811983@N02/">Фото галерея</a>
+        <a href="https://www.flickr.com/photos/198811983@N02/">{% trans "Фото галерея" %}</a>
       </li>
 
       <li>
-          <a href="{% url 'about:contact-us' %}">Свяжитесь с нами</a>
+          <a href="{% url 'about:contact-us' %}">{% trans "Свяжитесь с нами" %}</a>
       </li>
 
       {% if user.is_authenticated %}
-        <li><a href="{% url 'membership:profile' %}" class="btn-get-started">Профиль</a></li>
-        <li><a data-aos="fade-up" data-aos-delay="200" href="{% url 'users:logout' %}" class="btn-get-started">Выйти</a></li>
+        <li><a href="{% url 'membership:profile' %}" class="btn-get-started">{% trans "Профиль" %}</a></li>
+        <li><a data-aos="fade-up" data-aos-delay="200" href="{% url 'users:logout' %}" class="btn-get-started">{% trans "Выйти" %}</a></li>
       {% else %}
-      <li><a data-aos="fade-up" data-aos-delay="200" href="{% url 'users:login' %}" class="btn-get-started">Вход</a></li>
+      <li><a data-aos="fade-up" data-aos-delay="200" href="{% url 'users:login' %}" class="btn-get-started">{% trans "Вход" %}</a></li>
       {% endif %}
+      <li class="dropdown"><a href="#"><span>{% trans "Язык" %}</span><i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <ul>
+          {% get_current_language as LANGUAGE_CODE %}
+          {% get_available_languages as LANGUAGES %}
+          {% get_language_info_list for LANGUAGES as languages %}
+          {% for lang in languages %}
+          <li><a href="/{{ lang.code }}/">{{ lang.name_local }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
     </ul>
   </nav><!-- .navbar -->
 </div>

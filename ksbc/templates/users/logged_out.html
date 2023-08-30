@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Сброс пароля отправлен{% endblock title %}
+{% load i18n %}
+{% block title %}{% trans "Сброс пароля отправлен" %}{% endblock title %}
 {% block content %}
 <!-- ======= Breadcrumbs ======= -->
 <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-      <h2>Сброс пароля отправлен</h2>
+      <h2>{% trans "Сброс пароля отправлен" %}</h2>
       <ol>
-        <li><a href="{% url 'about:index' %}">Главная страница</a></li>
-        <li>Сброс пароля отправлен</li>
+        <li><a href="{% url 'about:index' %}">{% trans "Главная страница" %}</a></li>
+        <li>{% trans "Сброс пароля отправлен" %}</li>
       </ol>
 
     </div>
@@ -29,7 +30,7 @@
                             </div>
             
                             <p class="text-black-50 mb-5 pt-5">
-                                Вы вышли из своей учётной записи. Ждём вас снова!
+                                {% trans "Вы вышли из своей учётной записи. Ждём вас снова!" %}
                             </p>               
                         </div>
                     </div>

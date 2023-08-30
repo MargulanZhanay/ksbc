@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <div class="footer-content position-relative">
     <div class="container">
       <div class="row">
@@ -22,41 +23,41 @@
         </div><!-- End footer info column-->
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>О KSBC</h4>
+          <h4>{% trans "О KSBC" %}</h4>
           <ul>
-            <li><a href="{% url 'about:index' %}">Главная Страница</a></li>
-            <li><a href="{% url 'about:mission' %}">Миссия</a></li>
-            <li><a href="{% url 'about:vision' %}">Видение</a></li>
-            <li><a href="{% url 'about:word-of-chairman' %}">Слова Основателя</a></li>
-            <li><a href="{% url 'about:board-directors' %}">Совет Директоров</a></li>
+            <li><a href="{% url 'about:index' %}">{% trans "Главная Страница" %}</a></li>
+            <li><a href="{% url 'about:mission' %}">{% trans "Миссия" %}</a></li>
+            <li><a href="{% url 'about:vision' %}">{% trans "Видение" %}</a></li>
+            <li><a href="{% url 'about:word-of-chairman' %}">{% trans "Слова Основателя" %}</a></li>
+            <li><a href="{% url 'about:board-directors' %}">{% trans "Совет Директоров" %}</a></li>
           </ul>
         </div><!-- End footer links column-->
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Полезные ссылки</h4>
+          <h4>{% trans "Полезные ссылки" %}</h4>
           <ul>
-            <li><a href="{% url 'about:what-we-do' %}">Наши Услуги</a></li>
-            <li><a href="{% url 'about:our-structure' %}">Наша Структура</a></li>
-            <li><a href="{% url 'membership:membership-list' %}">Членство</a></li>
-            <li><a href="https://www.flickr.com/photos/198811983@N02/">Фото галерея</a></li>
-            <li><a href="{% url 'about:contact-us' %}">Связаться с нами</a></li>
+            <li><a href="{% url 'about:what-we-do' %}">{% trans "Наши Услуги" %}</a></li>
+            <li><a href="{% url 'about:our-structure' %}">{% trans "Наша Структура" %}</a></li>
+            <li><a href="{% url 'membership:membership-list' %}">{% trans "Резидентсво" %}</a></li>
+            <li><a href="https://www.flickr.com/photos/198811983@N02/">{% trans "Фото галерея" %}</a></li>
+            <li><a href="{% url 'about:contact-us' %}">{% trans "Связаться с нами" %}</a></li>
           </ul>
         </div><!-- End footer links column-->
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Новости и события</h4>
+          <h4>{% trans "Новости и события" %}</h4>
           <ul>
-            <li><a href="{% url 'news:news' %}">Новости</a></li>
-            <li><a href="{% url 'events:upcoming_events' %}">Предстоящие события</a></li>
-            <li><a href="{% url 'events:past_events' %}">Прошедшие события</a></li>
+            <li><a href="{% url 'news:news' %}">{% trans "Новости" %}</a></li>
+            <li><a href="{% url 'events:upcoming_events' %}">{% trans "Предстоящие события" %}</a></li>
+            <li><a href="{% url 'events:past_events' %}">{% trans "Прошедшие события" %}</a></li>
           </ul>
         </div><!-- End footer links column-->
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Авторизация</h4>
+          <h4>{% trans "Авторизация" %}</h4>
           <ul>
-            <li><a href="{% url 'users:login' %}">Вход</a></li>
-            <li><a href="{% url 'users:signup' %}">Зарегистрироваться</a></li>
+            <li><a href="{% url 'users:login' %}">{% trans "Вход" %}</a></li>
+            <li><a href="{% url 'users:signup' %}">{% trans "Зарегистрироваться" %}</a></li>
           </ul>
         </div><!-- End footer links column-->
       </div>

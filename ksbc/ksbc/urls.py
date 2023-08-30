@@ -5,11 +5,15 @@ from django.contrib.auth.views import (PasswordResetCompleteView,
                                        PasswordResetConfirmView,
                                        PasswordResetDoneView)
 from django.urls import include, path
+from django.conf.urls.i18n import i18n_patterns
+
 
 urlpatterns = [
-    path('', include('about.urls', namespace='about')),
-
     path('ksbcadminsecret/', admin.site.urls),
+]
+
+urlpatterns += i18n_patterns(
+    path('', include('about.urls', namespace='about')),
     path('news/', include('news.urls')),
     path('events/', include('events.urls')),
     path('', include('users.urls')),
@@ -23,7 +27,7 @@ urlpatterns = [
         template_name='users/password_reset_complete.html'),
         name='password_reset_complete'),
     path('', include('membership.urls'))
-]
+)
 
 if settings.DEBUG:
     urlpatterns += static(

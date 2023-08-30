@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
-{% block title %}Наша Структура{% endblock title %}
+{% block title %}{% trans "Наша Структура" %}{% endblock title %}
 {% block content %}
 <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-      <h2>Наша структура</h2>
+      <h2>{% trans "Наша структура" %}</h2>
       <ol>
-        <li><a href="{% url 'about:index' %}">Главная страница</a></li>
-        <li>Наша структура</li>
+        <li><a href="{% url 'about:index' %}">{% trans "Главная страница" %}</a></li>
+        <li>{% trans "Наша структура" %}</li>
       </ol>
     </div>
 </div><!-- End Breadcrumbs -->
@@ -18,12 +19,12 @@
         <ul class="nav nav-tabs row  g-2 d-flex">
             <li class="nav-item col-6">
                 <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-                <h4>Организационная структура (руководящий уровень)</h4>
+                <h4>{% trans "Организационная структура (руководящий уровень)" %}</h4>
                 </a>
             </li><!-- End tab nav item -->
             <li class="nav-item col-6">
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                <h4>Организационная структура (торговля)</h4>
+                <h4>{% trans "Организационная структура (торговля)" %}</h4>
                 </a><!-- End tab nav item -->
             </li>
         </ul>

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% block title %}{{ event.title }}{% endblock title %}
 {% load static %}
 {% load thumbnail %}
@@ -8,10 +9,10 @@
     style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-        <h2>Детали события</h2>
+        <h2>{% trans "Детали события" %}</h2>
         <ol>
-            <li><a href="index.html">Главная страница</a></li>
-            <li>Детали события</li>
+            <li><a href="{% url 'about:index' %}">{% trans "Главная страница" %}</a></li>
+            <li>{% trans "Детали события" %}</li>
         </ol>
 
     </div>
@@ -43,7 +44,7 @@
                         <div class='indented-text'>
                             <p>{{ event.text }}</p>
                             <div class="btn-wrap">
-                                <a href="{{ event.url }}" class="btn-buy">Зарегистрироваться</a>
+                                <a href="{{ event.url }}" class="btn-buy">{% trans "Зарегистрироваться" %}</a>
                             </div>
                         </div>
                     </div><!-- End post content -->

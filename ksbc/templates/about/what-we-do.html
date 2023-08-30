@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
-{% block title %}Наши услуги{% endblock title %}
+{% block title %}{% trans "Наши услуги" %}{% endblock title %}
 {% block content %}
 <!-- ======= Breadcrumbs ======= -->
 <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static '/img/breadcrumbs-bg.jpg' %});">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-        <h2>Наши услуги</h2>
+        <h2>{% trans "Наши услуги" %}</h2>
         <ol>
-            <li><a href="{% url 'about:index' %}">Главная страница</a></li>
-            <li>Наши услуги</li>
+            <li><a href="{% url 'about:index' %}">{% trans "Главная страница" %}</a></li>
+            <li>{% trans "Наши услуги" %}</li>
         </ol>
     </div>
 </div>
@@ -22,16 +23,16 @@
                 <div class="col-lg-7">
 
                 <div class="our-story">
-                    <h4>Наши услуги</h4>
-                    <h3>Выстраивание деловых связей</h3>
+                    <h4>{% trans "Наши услуги" %}</h4>
+                    <h3>{% trans "Выстраивание деловых связей" %}</h3>
                     <ul>
-                        <li><i class="bi bi-check-circle"></i> <span>Налаживание торговли, укрепление связей и улучшение жизни между Казахстаном и Сингапуром.</span></li><br>
-                        <li><i class="bi bi-check-circle"></i> <span>Способствовать росту, лидерству, инновациям и партнерству в Казахстане и Сингапуре.</span></li><br>
-                        <li><i class="bi bi-check-circle"></i> <span>Повысить прозрачность, доверие и инвестиции в частный сектор Казахстана.</span></li><br>
-                        <li><i class="bi bi-check-circle"></i> <span>Отстаивать точку зрения бизнеса по ключевым вопросам государственной политики.</span></li><br>
-                        <li><i class="bi bi-check-circle"></i> <span>Выступайте за корпоративное управление и защиту заинтересованных сторон.</span></li><br>
-                        <li><i class="bi bi-check-circle"></i> <span>Стимулировать процветание, представлять интересы бизнеса и укреплять членов организации.</span></li><br>
-                        <li><i class="bi bi-check-circle"></i> <span>Катализация экономического роста для своих членов и сообщества.</span></li><br>
+                        <li><i class="bi bi-check-circle"></i> <span>{% trans "Налаживание торговли, укрепление связей и улучшение жизни между Казахстаном и Сингапуром." %}</span></li><br>
+                        <li><i class="bi bi-check-circle"></i> <span>{% trans "Способствовать росту, лидерству, инновациям и партнерству в Казахстане и Сингапуре." %}</span></li><br>
+                        <li><i class="bi bi-check-circle"></i> <span>{% trans "Повысить прозрачность, доверие и инвестиции в частный сектор Казахстана." %}</span></li><br>
+                        <li><i class="bi bi-check-circle"></i> <span>{% trans "Отстаивать точку зрения бизнеса по ключевым вопросам государственной политики." %}</span></li><br>
+                        <li><i class="bi bi-check-circle"></i> <span>{% trans "Выступайте за корпоративное управление и защиту заинтересованных сторон." %}</span></li><br>
+                        <li><i class="bi bi-check-circle"></i> <span>{% trans "Стимулировать процветание, представлять интересы бизнеса и укреплять членов организации." %}</span></li><br>
+                        <li><i class="bi bi-check-circle"></i> <span>{% trans "Катализация экономического роста для своих членов и сообщества." %}</span></li><br>
                     </ul>
                 </div>
             </div>
@@ -44,7 +45,7 @@
 <section id="testimonials" class="testimonials section-bg">
     <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Партнеры</h2>
+          <h2>{% trans "Партнеры" %}</h2>
         </div>
         <section id='clients' class="clients">
             <div class="container" data-aos="zoom-in">
@@ -80,7 +81,7 @@
 <section id="testimonials" class="testimonials section-bg">
     <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Стратегические партнеры</h2>
+          <h2>{% trans "Стратегические партнеры" %}</h2>
         </div>
         <section id='clients' class="clients">
             <div class="container" data-aos="zoom-in">

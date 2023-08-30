@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}{{ news.title }}{% endblock title %}
 {% load static %}
+{% load i18n %}
 {% load thumbnail %}
 {% block content %}
 <!-- ======= Breadcrumbs ======= -->
@@ -8,10 +9,10 @@
     style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-        <h2>News Details</h2>
+        <h2>{% trans "Подробнее о новости" %}</h2>
         <ol>
-            <li><a href="index.html">Главная страница</a></li>
-            <li>News Details</li>
+            <li><a href="{% url 'about:index' %}">{% trans "Главная страница" %}</a></li>
+            <li>{% trans "Подробнее о новости" %}</li>
         </ol>
 
     </div>

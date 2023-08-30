@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Оплата прошла успешно{% endblock title %}
+{% load i18n %}
+{% block title %}{% trans "Оплата прошла успешно" %}{% endblock title %}
 {% block content %}
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'img/breadcrumbs-bg.jpg' %});">
         <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-            <h2>Оплата прошла успешно</h2>
+            <h2>{% trans "Оплата прошла успешно" %}</h2>
             <ol>
-            <li><a href="{% url 'about:index' %}">Главная страница</a></li>
-            <li>Оплата прошла успешно</li>
+            <li><a href="{% url 'about:index' %}">{% trans "Главная страница" %}</a></li>
+            <li>{% trans "Оплата прошла успешно" %}</li>
             </ol>
         </div>
     </div><!-- End Breadcrumbs -->
@@ -17,9 +18,9 @@
         <div class="container d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="100">
             <div class="text-center col-lg-8">
                 <article class="blog-details">
-                    <h2 class="title">Оплата прошла успешно!
+                    <h2 class="title">{% trans "Оплата прошла успешно!" %}
                     </h2><br><br>
-                    <p>Теперь вы официально резидент организации!</p>
+                    <p>{% trans "Теперь вы официально резидент организации!" %}</p>
                     <i class="bi bi-check-circle-fill"></i>
                 </article><!-- End blog post -->
             </div>
